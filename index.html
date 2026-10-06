@@ -297,6 +297,9 @@ input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border: 0; bo
 .faq summary::after { content: "+"; font: 500 26px/1 var(--font-body); color: var(--brand); transition: transform .3s; }
 .faq details[open] summary::after { transform: rotate(45deg); }
 .faq details p { margin: 0 0 24px; max-width: 64ch; }
+.faq details p:has(+ p) { margin-bottom: 12px; }
+/* svaren som börjar eller slutar med en replik ("Ja.", "Nej.", "Välkommen hem.") i guld, som sloganen */
+.faq details p.say { font: 400 21px/1.3 var(--font-ui); color: var(--gold-300); }
 .faq .sr-box { margin: 0 0 28px; }
 .sizes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 0 0 28px; }
 .sizes div { padding: 18px; border: 1px solid var(--line); border-radius: 8px; background: var(--obsidian-900); }
@@ -838,18 +841,20 @@ dialog.armory::backdrop { background: rgba(2, 4, 10, .72); backdrop-filter: blur
       <p class="eyebrow">Om oss</p>
       <h2 class="d2">Bra <span>att veta</span></h2>
       <div class="faq">
-        <details open><summary>Vad är HEMMET?</summary><p>En gemensam guild för spelare från många gamla gäng. I Forever samlas vi under ett och samma tak, med samma villkor för alla. Ingen grupp äger guilden, och ingen står utanför.</p></details>
-        <details><summary>Vad händer med mitt gamla gäng?</summary><p>Spela gärna med dem som vanligt. Gängen får däremot inga egna officiella roller i guildens struktur. I HEMMET är alla medlemmar på samma villkor.</p></details>
-        <details><summary>Är ni en hardcore-guild?</summary><p>Vi jagar inte world firsts. Vi är en samlingsplats för duktiga spelare med olika möjligheter. Vi har grupper som parsear högt, och grupper som får lite extra hjälp. Raida med folk du känner, i en struktur som gör det lätt att komma med.</p></details>
+        <details open><summary>Vad är HEMMET?</summary><p>HEMMET är en svensk guild för World of Warcraft Forever.</p><p>Vi är gamla guilds, kompisgäng, återvändare, tryhards, pappor, mammor och människor som på något sätt fortfarande kan lägga orimligt mycket tid på ett 20 år gammalt spel.</p><p>Några av oss har spelat tillsammans i halva våra liv. Andra flyttar in för första gången.</p><p class="say">Tanken är enkel: många gamla gäng, ett gemensamt hem.</p></details>
+        <details><summary>Vilka passar in här?</summary><p>Du behöver inte spela på ett visst sätt för att passa in.</p><p>Här finns spelare som tar ledigt vid release, jagar parses och läser Discord på toaletten på jobbet. Här finns också de som loggar in efter läggning, kör några dungeons och försvinner mitt i veckan på grund av VAB.</p><p>De flesta av oss hamnar någonstans däremellan.</p><p>Vi gillar att vara bra på spelet. Vi tycker också att det ska vara kul att spela det.</p></details>
+        <details><summary>Vad händer med mitt gamla gäng?</summary><p class="say">Förhoppningsvis följer de med.</p><p>HEMMET är byggt för att gamla kompisgäng ska kunna fortsätta spela tillsammans utan att guilden delas upp i små kungadömen.</p><p>Kör dungeons med dina vänner. Bygg en 10-manna. Sitt i samma Discord-kanal varje kväll sedan 2008.</p><p>Men när vi gör saker som guild gör vi det som HEMMET. Ingen grupp äger guilden och ingen behöver känna att de kom in sist.</p><p>Det finns också alltid plats i guildens ledning för den som visar engagemang och intresse och är gjord av det rätta virket! Både när det kommer till raids och communitybyggandet.</p></details>
+        <details><summary>Är ni casual eller hardcore?</summary><p class="say">Ja.</p><p>Vi kommer inte jaga world firsts, men vi tänker heller inte låtsas som att 99% parses är ointressanta.</p><p>I HEMMET finns spelare som vill optimera varje knapptryckning och spelare som behöver fråga var ingången till raiden ligger.</p><p>Ambitionen får variera. Det viktiga är att när du anmäler dig till något så respekterar du tiden och engagemanget för de andra som är där.</p><p class="say">Tryhard när det behövs. Ta en öl när det inte gör det.</p></details>
+        <details><summary>Måste jag raida?</summary><p class="say">Nej.</p><p>HEMMET och WoW Forever är större än raidkvällarna.</p><p>Levla. Farma. Kör PvP. Samla mounts. Hjälp någon med en dungeon du egentligen är alldeles för hög level för. Stå i Ironforge och diskutera något fullständigt oviktigt i 45 minuter.</p><p>Vi vill bygga en guild där det nästan alltid finns någon hemma.</p></details>
         <details><summary>Hur raidar vi?</summary>
           <div class="sizes">
-            <div><b>10</b><span>Fritt</span><p>Mindre grupper och raidledare sköter dessa ganska fritt. Mer roaming och FFA.</p></div>
-            <div><b>20</b><span>Guilden planerar</span><p>Guilden tar ett större ansvar för planering och samordning.</p></div>
-            <div><b>40</b><span>Guilden planerar</span><p>Guilden planerar, fyller platserna och ser till att kvällen har ledare.</p></div>
-          </div>
-        </details>
-        <details><summary>Hur fungerar loot?</summary><p>Systemet vi har diskuterat är SoftRes med roll. Före raiden reserverar du det föremål du helst vill ha. Droppar det rollar bara de som reserverat, och högst vinner. Har ingen reserverat är det fri roll. Detaljerna bestäms senare. Testa här:</p><div class="sr-box" id="sr"></div></details>
-        <details><summary>Var kommer siffrorna på sidan ifrån?</summary><p>Från Blizzards officiella API, som vi frågar var 30:e minut: level, item level, HP, honorable kills, utrustning, rykten och porträtt. Ur det räknar vi fram dings, kronor och achievements. Ingen addon behövs. Passlängderna är uppskattade: Blizzard visar när du loggar in men inte när du loggar ut, så vi ser det först när profilen uppdateras, med högst en halvtimmes fel.</p></details>
+            <div><b>10</b><span>Ganska fritt</span><p>Bygg grupper med människor du gillar att spela med. Raidledare och grupper får stor frihet att organisera sig själva.</p></div>
+            <div><b>20</b><span>Mer HEMMET</span><p>När grupperna blir större hjälper guilden till med planering, samordning och att få ihop rätt folk. Med flera raidgrupper kommer olika ambitionsnivåer att erbjudas.</p></div>
+            <div><b>40</b><span>Nu bor vi tillsammans</span><p>Guilden planerar, fyller platserna och ser till att någon åtminstone på pappret vet vad vi håller på med.</p></div>
+          </div><p>Målet är inte att tvinga alla in i samma schema. Målet är att göra det enkelt att faktiskt komma iväg och raida, oavsett ambitionsnivå.</p></details>
+        <details><summary>Hur fungerar loot?</summary><p>Utgångspunkten är Soft Reserve + roll.</p><p>Före raiden reserverar du föremålet du helst vill ha. Droppar det får de som reserverat föremålet rolla om det. Högst vinner. Har ingen reserverat är det fri roll.</p><p>Enkelt, transparent och med så lite loot-drama som mänskligt möjligt. Exakta detaljer sätter vi innan det börjar bli viktigt på riktigt. Testa här:</p><div class="sr-box" id="sr"></div></details>
+        <details><summary>Vad förväntas av mig?</summary><p class="say">Inte särskilt mycket. Men vi vill att du ska vara dig själv!</p><p>Var trevlig. Hjälp till när du kan. Respektera andras tid. Och har du tackat ja till något, respektera andras dyrbara fritid och dyk upp.</p><p>Olika ambitionsnivåer och raids kommer att förvänta sig olika nivåer av ansträngning. Var ärlig mot dig själv och andra när det kommer till vad du kan bidra med.</p><p>Du behöver inte vara bäst. Du behöver bara vara dig själv.</p></details>
+        <details><summary>Kan jag ta med mina vänner?</summary><p class="say">Det är lite hela poängen.</p><p>HEMMET ska inte vara ännu en guild där gamla grupper måste välja mellan att hålla ihop och att vara en del av något större.</p><p>Ta med gänget. Det finns plats vid elden.</p><p class="say">Välkommen hem.</p></details>
       </div>
     </div>
   </section>
