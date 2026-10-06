@@ -2,6 +2,7 @@
 <meta name="robots" content="noindex, nofollow">
 <title>HEMMET</title>
 <meta name="description" content="En Guild of Guilds i WoW Forever.">
+<link rel="icon" type="image/png" href="ach/logo-64.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Marcellus&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
@@ -77,6 +78,8 @@ section { padding-block: clamp(72px, 10vw, 140px); }
 .topbar.is-visible { transform: none; }
 .topbar__brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font: 700 17px/1 var(--font-display); letter-spacing: .14em; color: var(--text-primary); flex: none; }
 .topbar__brand svg { width: 26px; height: 26px; color: var(--gold-300); }
+/* loggan (H-sigillet). Flamman finns kvar som <symbol id="sigil"> om vi vill byta tillbaka */
+.topbar__brand .logo { width: auto; height: 30px; }
 .topbar nav { display: flex; gap: 22px; overflow-x: auto; scrollbar-width: none; }
 .topbar nav a { font: 600 14px/1 var(--font-body); text-decoration: none;   /* menyn är ram, inte spel: Open Sans som på Blizzards Forever-sida */ color: var(--text-muted); white-space: nowrap; }
 .topbar nav a:hover { color: var(--text-primary); }
@@ -95,6 +98,7 @@ section { padding-block: clamp(72px, 10vw, 140px); }
 .hero__glow { position: absolute; inset: 0; z-index: -1; background: radial-gradient(ellipse 60% 45% at 50% 60%, rgba(42, 88, 189, .35), transparent 70%), radial-gradient(ellipse 40% 30% at 50% 38%, rgba(217, 169, 63, .14), transparent 70%); }
 .hero canvas { position: absolute; inset: 0; z-index: -1; width: 100%; height: 100%; pointer-events: none; }
 .hero__sigil { width: 64px; height: 64px; margin-bottom: 20px; color: var(--gold-300); filter: drop-shadow(0 0 18px rgba(217, 169, 63, .5)); }
+img.hero__sigil { width: auto; height: 80px; filter: drop-shadow(0 0 22px rgba(217, 169, 63, .35)) drop-shadow(0 4px 10px rgba(0,0,0,.6)); }
 .hero__meta { font: 600 14px/1 var(--font-label); letter-spacing: var(--cap); text-transform: uppercase; color: var(--text-muted); margin: 0 0 14px; }
 .hero__meta b { color: var(--brand); font-weight: 600; }
 .hero h1 { margin: 0; font: 700 var(--fs-hero)/.9 var(--font-display); letter-spacing: .04em; color: var(--text-primary); filter: drop-shadow(0 6px 30px rgba(0, 0, 0, .6)); }
@@ -680,14 +684,14 @@ dialog.armory::backdrop { background: rgba(2, 4, 10, .72); backdrop-filter: blur
 </svg>
 
 <header class="topbar" id="topbar">
-  <a class="topbar__brand" href="#top"><svg><use href="#sigil"/></svg>HEMMET</a>
+  <a class="topbar__brand" href="#top"><img class="logo" src="ach/logo.webp" alt="">HEMMET</a>
   <nav aria-label="Sektioner"><a href="#resan">Resan</a><a href="#bedrifter">Achievements</a><a href="#statistik">Statistik</a><a href="#topp">Topplistor</a><a href="#grupp">Grupp</a><a href="#jamfor">Jämför</a><a href="#faq">Om oss</a></nav>
 </header>
 
 <main id="top">
   <section class="hero" id="hero">
     <div class="hero__art"></div><div class="hero__glow"></div><canvas id="embers"></canvas>
-    <svg class="hero__sigil"><use href="#sigil"/></svg>
+    <img class="hero__sigil logo" src="ach/logo.webp" alt="">
     <p class="hero__meta">EU · <b>WoW Forever</b> · 5 nov</p>
     <h1 id="title">HEMMET</h1>
     <p class="hero__slogan">Välkommen hem.</p>
@@ -1755,7 +1759,6 @@ if (ME) { $("who").value = ME.name; setMe(ME.name, true); }
 if (RECRUIT) {
   document.body.classList.add("is-recruit");
   fetchDiscord(); setInterval(fetchDiscord, 5 * 60e3);
-  document.title = "HEMMET · A Guild of Guilds";
   const second = $("heroSecond");
   second.textContent = "Se vad som väntar"; second.classList.replace("btn--ghost", "btn--primary");
   const discord = document.querySelector("#hero .btn-row > a.btn--primary"); if (discord) discord.classList.replace("btn--primary", "btn--ghost");
