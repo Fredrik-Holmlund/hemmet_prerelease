@@ -99,8 +99,8 @@ section { padding-block: clamp(72px, 10vw, 140px); }
 .hero canvas { position: absolute; inset: 0; z-index: -1; width: 100%; height: 100%; pointer-events: none; }
 .hero__sigil { width: 64px; height: 64px; margin-bottom: 20px; color: var(--gold-300); filter: drop-shadow(0 0 18px rgba(217, 169, 63, .5)); }
 img.hero__sigil { width: auto; height: 80px; filter: drop-shadow(0 0 22px rgba(217, 169, 63, .35)) drop-shadow(0 4px 10px rgba(0,0,0,.6)); }
-.hero__meta { font: 600 14px/1 var(--font-label); letter-spacing: var(--cap); text-transform: uppercase; color: var(--text-muted); margin: 0 0 14px; }
-.hero__meta b { color: var(--brand); font-weight: 600; }
+.hero__meta { font: 600 14px/1 var(--font-label); letter-spacing: var(--cap); text-transform: uppercase; color: var(--text-primary); margin: 0 0 14px; text-shadow: 0 1px 3px rgba(0,0,0,.9), 0 0 14px rgba(0,0,0,.7); }   /* vit med skugga: syns mot ljusa partier i bakgrunden */
+.hero__meta b { color: var(--gold-300); font-weight: 600; }
 .hero h1 { margin: 0; font: 700 var(--fs-hero)/.9 var(--font-display); letter-spacing: .04em; color: var(--text-primary); filter: drop-shadow(0 6px 30px rgba(0, 0, 0, .6)); }
 .hero h1 .ch { display: inline-block; animation: rise 1.1s var(--ease) both; animation-delay: calc(var(--i) * 80ms + 150ms);
   background: linear-gradient(180deg, #fff8ea 30%, #c9b18a); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
