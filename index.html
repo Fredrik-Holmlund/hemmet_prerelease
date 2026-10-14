@@ -868,7 +868,7 @@ dialog.armory::backdrop { background: rgba(2, 4, 10, .72); backdrop-filter: blur
       <p class="lede">Kom som du är, och ta med dina vänner.</p>
       <p class="slogan">Välkommen hem.</p>
       <div class="join__btns">
-        <a class="btn btn--primary" href="https://discord.gg/vtuVaYBpMj" target="_blank" rel="noopener">Gå med i Discord</a>
+        <a class="btn btn--primary" href="https://discord.gg/Gx5xQMurNy" target="_blank" rel="noopener">Gå med i Discord</a>
         <a class="btn btn--ghost" href="https://forms.gle/cJNsWBnYfTiQd9bu9" target="_blank" rel="noopener">Inneboendekontrakt</a>
       </div>
     </div>
@@ -1080,7 +1080,7 @@ new IntersectionObserver(([e]) => $("topbar").classList.toggle("is-visible", !e.
 let DISCORD = null;
 async function fetchDiscord() {
   try {
-    const j = await (await fetch("https://discord.com/api/v10/invites/vtuVaYBpMj?with_counts=true")).json();
+    const j = await (await fetch("https://discord.com/api/v10/invites/Gx5xQMurNy?with_counts=true")).json();
     if (j.approximate_member_count) DISCORD = { members: j.approximate_member_count, online: j.approximate_presence_count };
   } catch (e) {}
   drawTicker();
