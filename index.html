@@ -1080,7 +1080,7 @@ new IntersectionObserver(([e]) => $("topbar").classList.toggle("is-visible", !e.
 let DISCORD = null;
 async function fetchDiscord() {
   try {
-    const j = await (await fetch("https://discord.com/api/v10/invites/NhhGAZaVk?with_counts=true")).json();
+    const j = await (await fetch("https://discord.com/api/v10/invites/vtuVaYBpMj?with_counts=true")).json();
     if (j.approximate_member_count) DISCORD = { members: j.approximate_member_count, online: j.approximate_presence_count };
   } catch (e) {}
   drawTicker();
