@@ -1,0 +1,26 @@
+[
+  {
+    "level": "A",
+    "rank": 3,
+    "name": "Min-Max Raiding",
+    "tagline": "För dig som vill optimera, prestera och jaga riktigt bra logs.",
+    "color": "#ff8000",
+    "quality": "Legendary"
+  },
+  {
+    "level": "B",
+    "rank": 2,
+    "name": "Focused Raiding",
+    "tagline": "Raida seriöst och effektivt, men med lite mer utrymme för flexibilitet.",
+    "color": "#a335ee",
+    "quality": "Epic"
+  },
+  {
+    "level": "C",
+    "rank": 1,
+    "name": "Chill Raiding",
+    "tagline": "Ha kul, döda bossar och umgås utan alltför höga prestationskrav.",
+    "color": "#0070dd",
+    "quality": "Rare"
+  }
+]

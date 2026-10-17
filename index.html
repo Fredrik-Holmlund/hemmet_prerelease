@@ -364,7 +364,29 @@ input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border: 0; bo
 .is-recruit .hero__scroll { display: none; }
 .is-recruit:not(.show-case) .demo-badge { display: none; }
 .is-recruit .demo-badge { z-index: 70; }
-.is-recruit .toast, .is-recruit .tip { z-index: 80; }   /* popups och tooltips ovanför overlayen */
+.is-recruit .toast, .is-recruit .tip { z-index: 80; }
+/* det som bara hör till rekryteringssidan (länkarna till raiding/) */
+.recruit-only { display: none !important; }
+.is-recruit .recruit-only { display: revert !important; }
+.next-up { text-align: center; }
+.next-up .eyebrow { justify-content: center; }
+.next-up .lede { margin-inline: auto; }
+/* "Se vad som väntar": två kort, levelingresan (overlayen) och raiding (egen sida) */
+.choose { position: fixed; inset: 0; z-index: 85; display: grid; place-items: center; padding: 16px; overflow-y: auto; background: rgba(2, 4, 10, .8); backdrop-filter: blur(6px); }
+.choose__box { position: relative; width: min(880px, 100%); text-align: center; animation: rise-in .3s var(--ease); }
+.choose__box .eyebrow { justify-content: center; }
+.choose__x { position: absolute; top: -4px; right: 0; }
+.choose__cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 30px; }
+.choose__card { position: relative; isolation: isolate; overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-start; min-height: 320px; padding: 24px;
+  text-align: left; text-decoration: none; color: var(--text-body); border: 1px solid var(--line-strong); border-radius: 10px; transition: transform .25s var(--ease), border-color .25s; }
+.choose__card::before { content: ""; position: absolute; inset: 0; z-index: -2; background: var(--img) center / cover; transition: transform .5s var(--ease); }
+.choose__card::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(4,7,15,.05) 15%, rgba(4,7,15,.94) 72%); }
+.choose__card:hover { transform: translateY(-3px); border-color: var(--gold-300); }
+.choose__card:hover::before { transform: scale(1.05); }
+.choose__card small { font: 600 13px/1.2 var(--font-label); letter-spacing: var(--cap); text-transform: uppercase; color: var(--brand); }
+.choose__card b { margin: 6px 0 8px; font: 600 30px/1.1 var(--font-display); color: var(--text-primary); }
+.choose__card p { margin: 0 0 18px; font-size: 15px; line-height: 1.5; }
+@media (max-width: 700px) { .choose { place-items: start center; padding-top: 60px; } .choose__cards { grid-template-columns: 1fr; } .choose__card { min-height: 230px; } }   /* popups och tooltips ovanför overlayen */
 @media (max-width: 700px) { .hint-arrow { left: auto; right: 4px; top: -70px; width: 64px; transform: rotate(60deg); } .play-hint span { font-size: 15px; } }
 .stat-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; margin-top: 40px; }
 /* diagrammen på mörkt pergament med guldkurvor: samma värme som korten under */
@@ -837,6 +859,15 @@ dialog.armory::backdrop { background: rgba(2, 4, 10, .72); backdrop-filter: blur
     </div>
   </section>
 
+  <section class="recruit-only next-up">
+    <div class="narrow">
+      <p class="eyebrow">Efter levelingresan</p>
+      <h2 class="d1">Och sen? <span>Raiding.</span></h2>
+      <p class="lede">När guilden har nått 60 börjar nästa kapitel: raidgrupper på tre ambitionsnivåer, och ordning på vem som håller i nycklarna.</p>
+      <div class="join__btns"><a class="btn btn--primary" href="raiding/">Se hur vi raidar →</a></div>
+    </div>
+  </section>
+
   </div>
 
   <section id="faq">
@@ -861,7 +892,7 @@ dialog.armory::backdrop { background: rgba(2, 4, 10, .72); backdrop-filter: blur
             <div><b>10</b><span>Ganska fritt</span><p>Bygg grupper med människor du gillar att spela med. Raidledare och grupper får stor frihet att organisera sig själva.</p></div>
             <div><b>20</b><span>Mer HEMMET</span><p>När grupperna blir större hjälper guilden till med planering, samordning och att få ihop rätt folk. Med flera raidgrupper kommer olika ambitionsnivåer att erbjudas.</p></div>
             <div><b>40</b><span>Nu bor vi tillsammans</span><p>Guilden planerar, fyller platserna och ser till att någon åtminstone på pappret vet vad vi håller på med.</p></div>
-          </div><p>Målet är inte att tvinga alla in i samma schema. Målet är att göra det enkelt att faktiskt komma iväg och raida, oavsett ambitionsnivå.</p></details>
+          </div><p>Målet är inte att tvinga alla in i samma schema. Målet är att göra det enkelt att faktiskt komma iväg och raida, oavsett ambitionsnivå.</p><p class="recruit-only"><a class="btn btn--primary btn--sm" href="raiding/">Se raidgrupperna →</a></p></details>
         <details><summary>Hur fungerar loot?</summary><p>Utgångspunkten är Soft Reserve + roll.</p><p>Före raiden reserverar du föremålet du helst vill ha. Droppar det får de som reserverat föremålet rolla om det. Högst vinner. Har ingen reserverat är det fri roll.</p><p>Enkelt, transparent och med så lite loot-drama som mänskligt möjligt. Exakta detaljer sätter vi innan det börjar bli viktigt på riktigt. Testa här:</p><div class="sr-box" id="sr"></div></details>
         <details><summary>Vad förväntas av mig?</summary><p class="say">Inte särskilt mycket. Men vi vill att du ska vara dig själv!</p><p>Var trevlig. Hjälp till när du kan. Respektera andras tid. Och har du tackat ja till något, respektera andras dyrbara fritid och dyk upp.</p><p>Olika ambitionsnivåer och raids kommer att förvänta sig olika nivåer av ansträngning. Var ärlig mot dig själv och andra när det kommer till vad du kan bidra med.</p><p>Du behöver inte vara bäst. Du behöver bara vara dig själv.</p></details>
         <details><summary>Kan jag ta med mina vänner?</summary><p class="say">Det är lite hela poängen.</p><p>HEMMET ska inte vara ännu en guild där gamla grupper måste välja mellan att hålla ihop och att vara en del av något större.</p><p>Ta med gänget. Det finns plats vid elden.</p><p class="say">Välkommen hem.</p></details>
@@ -886,6 +917,17 @@ dialog.armory::backdrop { background: rgba(2, 4, 10, .72); backdrop-filter: blur
 <footer><a class="foot__brand" href="#top"><img class="logo" src="ach/logo.webp" alt=""><span><b>HEMMET</b><small>A Guild of Guilds · Alliance PvP · EU · WoW Forever</small></span></a><span id="footData">Data från Blizzards API.</span></footer>
 <dialog class="armory" id="armory" aria-label="Armory"></dialog>
 <div class="toast" id="toast" aria-live="polite"></div>
+<div class="choose" id="choose" role="dialog" aria-modal="true" aria-labelledby="chooseTitle" hidden>
+  <div class="choose__box">
+    <button class="btn btn--ghost btn--sm choose__x" type="button" id="chooseClose">Stäng ✕</button>
+    <p class="eyebrow">Se vad som väntar</p>
+    <h2 class="d2" id="chooseTitle">Vad vill du <span>se först</span>?</h2>
+    <div class="choose__cards">
+      <a class="choose__card" href="#resan" style="--img:url('ach/zone-elwynn.webp')"><small>Från 5 nov</small><b>Levelingresan</b><p>Hela guilden från level 1 till 60, dag för dag. Kronor, achievements och topplistor.</p><span class="btn btn--primary btn--sm">Se levelingresan</span></a>
+      <a class="choose__card" href="raiding/" style="--img:url('ach/zone-steppes.webp')"><small>Från december</small><b>Raiding</b><p>Raidgrupperna, ambitionsnivåerna och vem som håller i nycklarna. Hitta ditt rum.</p><span class="btn btn--primary btn--sm">Se raidgrupperna</span></a>
+    </div>
+  </div>
+</div>
 <div class="demo-badge" id="demoBadge" hidden>Förhandsvisning · exempeldata</div>
 <div class="tip" id="tip" hidden></div>
 <datalist id="names"></datalist>
@@ -1784,16 +1826,28 @@ if (RECRUIT) {
   second.textContent = "Se vad som väntar"; second.classList.replace("btn--ghost", "btn--primary");
   const discord = document.querySelector("#hero .btn-row > a.btn--primary"); if (discord) discord.classList.replace("btn--primary", "btn--ghost");
   $("heroArrow").hidden = false;
-  document.querySelector(".topbar nav").innerHTML = `<a href="#resan">Se vad som väntar</a><a href="#faq">FAQ</a><a href="#join">Flytta in</a>`;
+  document.querySelector(".topbar nav").innerHTML = `<a href="#resan">Levelingresan</a><a href="raiding/">Raiding</a><a href="#faq">FAQ</a><a href="#join">Flytta in</a>`;
   const showcase = $("showcase");
   const openCase = () => { document.body.classList.add("show-case"); showcase.scrollTop = 0; requestAnimationFrame(() => { drawBoard(); dispatchEvent(new Event("resize")); }); };
   const closeCase = () => { document.body.classList.remove("show-case"); stop(); };
+  // "Se vad som väntar" i heron öppnar valet: levelingresan (overlayen) eller raiding (raiding/, egen sida)
+  const choose = $("choose");
+  const openChoose = () => { choose.hidden = false; choose.querySelector(".choose__card").focus(); };
+  const closeChoose = () => { choose.hidden = true; };
+  $("chooseClose").addEventListener("click", closeChoose);
+  choose.addEventListener("click", (e) => { if (e.target === choose) closeChoose(); });
   $("showcaseClose").addEventListener("click", closeCase);
-  addEventListener("keydown", (e) => { if (e.key === "Escape" && document.body.classList.contains("show-case")) closeCase(); });
+  addEventListener("keydown", (e) => {
+    if (e.key !== "Escape") return;
+    if (!choose.hidden) closeChoose(); else if (document.body.classList.contains("show-case")) closeCase();
+  });
+  const CASE = ["resan", "bedrifter", "statistik", "topp", "grupp", "jamfor", "nya"];
+  if (CASE.includes(location.hash.slice(1))) openCase();   // länkar hit utifrån, t.ex. hemmet.wtf/#resan
   document.addEventListener("click", (e) => {
     const a = e.target.closest("a[href^='#']"); if (!a) return;
     const id = a.getAttribute("href").slice(1);
-    if (["resan", "bedrifter", "statistik", "topp", "grupp", "jamfor", "nya"].includes(id) && !showcase.contains(a)) { e.preventDefault(); openCase(); return; }
+    if (a.id === "heroSecond") { e.preventDefault(); openChoose(); return; }
+    if (CASE.includes(id) && !showcase.contains(a)) { e.preventDefault(); closeChoose(); openCase(); return; }
     if (showcase.contains(a) && (id === "faq" || id === "join")) { e.preventDefault(); closeCase(); $(id).scrollIntoView({ behavior: "smooth" }); }
   }, true);
 }

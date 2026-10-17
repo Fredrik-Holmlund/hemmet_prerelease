@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="sv" data-visning>
+<head>
+<meta charset="utf-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7J22MCW321"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7J22MCW321');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Raiding i HEMMET – svensk guild i WoW Forever</title>
+<meta name="description" content="Vem gör vad i HEMMET: ledningen, raidgrupperna och vem du ska prata med.">
+<link rel="canonical" href="https://hemmet.wtf/raiding/">
+<link rel="icon" type="image/png" href="assets/logo-64.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Marcellus&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="demobar" role="note">
+  <span class="demobar__tag">Förhandsvisning</span>
+  <span class="demobar__text">Det här är en demo. Namnen och grupperna är påhittade, och det du ändrar sparas bara i din egen webbläsare.</span>
+  <button class="demobar__btn" data-account>Prova som ledning eller Raid Master</button>
+</div>
+<header class="topbar">
+  <a class="topbar__brand" href="#start"><img class="logo" src="assets/logo.webp" alt="">HEMMET</a>
+  <div class="topbar__right">
+    <nav aria-label="Sidor">
+      <a href="#start" data-nav="start">Start</a><a href="#raidgrupper" data-nav="raidgrupper">Raidgrupper</a><a href="#roller" data-nav="roller">Roller<span class="wide-only"> &amp; ansvar</span></a>
+    </nav>
+    <div id="account"></div>
+  </div>
+</header>
+
+<!-- Start: konceptet. Texterna kommer från ledningens utkast (oktober 2026) och kan bytas ut. -->
+<main class="page" data-page="start">
+  <div class="hero">
+    <div class="hero__art" aria-hidden="true"></div>
+    <div class="narrow">
+      <p class="eyebrow">Raiding i HEMMET</p>
+      <h1 class="d1">Ordning i <span>hemmet</span>.</h1>
+      <p class="lede">Ett guild med många viljor, flera raidgrupper och ett gemensamt hem. Här ser du hur vi raidar, vem som ansvarar för vad och hur du hittar din grupp.</p>
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="#raidgrupper">Se våra raidgrupper</a>
+        <a class="btn btn--ghost" href="#raidgrupper/soker">Öppna för signups</a>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <p class="eyebrow">Raidgrupper &amp; ambitionsnivåer</p>
+      <h2 class="d2">Ett hem, många sätt att <span>raida</span></h2>
+      <p class="lede">Alla behöver inte spela på samma nivå. Däremot förväntar vi oss att du respekterar den ambitionsnivå du anmäler dig till, kommer förberedd utifrån gruppens förväntningar och respekterar andra spelares tid.</p>
+      <div class="levels" id="levelCards"></div>
+      <div class="naming">
+        <p><b>Så heter grupperna.</b> Bokstaven är ambitionsnivån och siffran skiljer grupper inom samma nivå åt, oftast i den ordning de skapas. <span class="gcode" style="--q:#a335ee">B2</span> är alltså den andra Focused-gruppen.</p>
+        <p class="note">Gränserna mellan nivåerna är inte huggna i sten. Exakt vad de innebär utvecklar vi tillsammans efter hand. Varje Raid Master beskriver gruppens egen ambition.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="eyebrow">Vem ansvarar för vad?</p>
+      <h2 class="d2">Vem håller i <span>nycklarna</span>?</h2>
+      <p class="lede">Varje raidgrupp har en Raid Master som ansvarar för att allt runt raiden fungerar. Raid Master behöver inte göra allt själv, men ska se till att följande blir gjort.</p>
+      <div class="org org--titles" id="org"></div>
+      <div id="fnSteps"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="eyebrow">Hur hittar jag en raidgrupp?</p>
+      <h2 class="d2">Hitta ditt <span>rum</span></h2>
+      <div class="howto-panel howto-panel--plain">
+        <ol class="howto">
+          <li><span class="howto__n n">1</span><div><b>Kolla raidgrupperna.</b> Här ser du vilka grupper som finns, deras ambitionsnivå, vem som ansvarar och vilka som är öppna för signups.</div></li>
+          <li><span class="howto__n n">2</span><div><b>Läs om gruppen.</b> Klicka in på en grupp: där står vad den raidar, vilka som ansvarar, om den är öppen för signups och länken till gruppens tråd på Discord.</div></li>
+          <li><span class="howto__n n">3</span><div><b>Säg hej.</b> Hör av dig till gruppens ansvariga, direkt eller i gruppens tråd på Discord, och håll utkik efter signups via RaidHelper.</div></li>
+        </ol>
+        <div class="cta">
+          <a class="btn btn--primary" href="#raidgrupper">Se våra raidgrupper</a>
+          <a class="btn btn--ghost" href="#raidgrupper/soker">Öppna för signups</a>
+          <a class="linkish" href="#roller">Läs mer om rollerna</a>
+        </div>
+      </div>
+      <figure class="quote">
+        <blockquote>I hemmet finns det plats för både 99-parses och en raid <span>efter läggning</span>.</blockquote>
+      </figure>
+    </div>
+  </section>
+</main>
+
+<!-- Raidgrupper -->
+<main class="page" data-page="raidgrupper" hidden>
+  <section class="page-head">
+    <div class="wrap">
+      <p class="eyebrow">Raidgrupper</p>
+      <h1 class="d2">Ett hus, flera <span>rum</span></h1>
+      <p class="lede">Hitta din grupp och se vem som ansvarar för vad.</p>
+      <div id="groupFilter"></div>
+      <div id="groups"></div>
+      <div class="removed" id="removed"></div>
+    </div>
+  </section>
+</main>
+
+<!-- Roller & ansvar -->
+<main class="page" data-page="roller" hidden>
+  <section class="page-head">
+    <div class="wrap">
+      <p class="eyebrow">Roller &amp; ansvar</p>
+      <h1 class="d2">Någon måste ju <span>styra upp</span> det här</h1>
+      <div class="cols">
+        <div id="roleList"></div>
+        <div id="fnList"></div>
+      </div>
+      <h2 class="h3" style="margin-top:56px">Ambitionsnivåer</h2>
+      <p class="note">Varje grupp väljer en nivå, så vet du vad du anmäler dig till.</p>
+      <div class="levels" id="ambList"></div>
+    </div>
+  </section>
+</main>
+
+<main id="groupPage" hidden></main>
+
+<div class="scrim" id="scrim" hidden></div>
+<aside class="drawer" id="drawer" aria-hidden="true" tabindex="-1">
+  <button class="drawer__close" id="drawerClose" aria-label="Stäng">✕</button>
+  <div id="drawerBody"></div>
+</aside>
+
+<footer><a class="foot__brand" href="#start"><img class="logo" src="assets/logo.webp" alt=""><span><b>HEMMET</b><small>A Guild of Guilds · Alliance PvP · EU · WoW Forever</small></span></a></footer>
+<div class="stamp"><b>Demo</b> · påhittade namn</div>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>

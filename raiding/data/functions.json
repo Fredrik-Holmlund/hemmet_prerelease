@@ -1,0 +1,79 @@
+[
+  {
+    "id": "signups",
+    "sort": 1,
+    "name": "Raid Signups",
+    "short_name": "Signups",
+    "purpose": "Planera och publicera raidens signup.",
+    "summary": "Publiceras via RaidHelper, normalt 6–7 dagar före återkommande raids.",
+    "description": "Säkerställa att signup skapas och publiceras i Discord med RaidHelper-botten.",
+    "deadline": "6–7 dagar före raidstart, för återkommande raidgrupper när det är tillämpligt.",
+    "tools": [
+      "Discord",
+      "RaidHelper"
+    ]
+  },
+  {
+    "id": "roster",
+    "sort": 2,
+    "name": "Roster & uttagning",
+    "short_name": "Roster",
+    "purpose": "Välja, fastställa och kommunicera raidens deltagare.",
+    "summary": "Uttagning enligt guildens riktlinjer och gruppens ambitionsnivå. Rostern kommuniceras senast 24 timmar före raidstart och uttagna spelare taggas i Discord.",
+    "description": "Raidens roster tas ut, fastställs och kommuniceras. Samtliga uttagna spelare taggas i Discord.\n\nVid uttagning följs guildens gemensamma riktlinjer och playbook, med hänsyn till raidgruppens ambitionsnivå och gällande prioriteringsprinciper. Detaljerade uttagningsregler kommer separat.",
+    "deadline": "Senast 24 timmar före raidstart, gärna tidigare.",
+    "tools": [
+      "Discord"
+    ]
+  },
+  {
+    "id": "loot",
+    "sort": 3,
+    "name": "Loot Management",
+    "short_name": "Loot",
+    "purpose": "Förbereda och administrera lootfördelning.",
+    "summary": "Soft Reserve via softres.it och lootadministration med Gargul.",
+    "description": "En Soft Reserve-länk skapas via softres.it och delas med deltagarna inför raiden. Loot hanteras och fördelas enligt raidens gällande regler med stöd av Gargul.\n\nHanteringen ska vara tydlig, konsekvent och transparent.",
+    "deadline": "Soft Reserve delas inför raiden.",
+    "tools": [
+      "softres.it",
+      "Gargul"
+    ]
+  },
+  {
+    "id": "assignments",
+    "sort": 4,
+    "name": "Assignments & taktik",
+    "short_name": "Assignments",
+    "purpose": "Säkerställa att deltagarna är förberedda på sina uppgifter.",
+    "summary": "Boss-assignments hålls uppdaterade under Assignments på gruppens sida och delas i förväg vid behov.",
+    "description": "Raidens assignments hålls uppdaterade under fliken Assignments på gruppens sida här, och delas med deltagarna i god tid före raidstart när det behövs. Därifrån går de också att skicka till Discord som bild.\n\nSyftet är att varje spelare ska kunna förbereda sig och förstå sina uppgifter under respektive bossfight.",
+    "deadline": "I god tid före raidstart.",
+    "tools": [
+      "Assignments på gruppens sida"
+    ]
+  },
+  {
+    "id": "leadership",
+    "sort": 5,
+    "name": "Raid Leadership",
+    "short_name": "Raid Leadership",
+    "purpose": "Säkerställa en tydlig taktisk ledning.",
+    "summary": "En utsedd Raid Leader leder raiden och har sista ordet i taktiska beslut när det behövs.",
+    "description": "Raid Master utser en Raid Leader som ansvarar för den taktiska ledningen under raiden, inklusive koordinering, calls och beslut. Raid Master kan själv axla rollen.\n\nFlera personer kan bidra med calls, men det ska alltid finnas en tydligt utsedd Raid Leader som har sista ordet när ett beslut behöver fattas.",
+    "deadline": "Utsedd innan raiden startar.",
+    "tools": [],
+    "holder_title": "Raid Leader"
+  },
+  {
+    "id": "feedback",
+    "sort": 6,
+    "name": "Feedback & konflikthantering",
+    "short_name": "Feedback",
+    "purpose": "Vara kontaktperson för raidrelaterade frågor.",
+    "summary": "Raid Master är första kontaktperson vid frågor, synpunkter eller missnöje kring den egna raidgruppen.",
+    "description": "Den naturliga kontaktpersonen för frågor, synpunkter och klagomål kopplade till raidgruppen, till exempel uttagningar, lootbeslut eller hur en raid genomförts.\n\nRaid Master förväntas lyssna, kunna motivera beslut och hantera frågor sakligt och konstruktivt. Vid behov lyfts frågan vidare till Guild Leaders.",
+    "deadline": "Löpande.",
+    "tools": []
+  }
+]

@@ -1,0 +1,236 @@
+[
+ {
+  "id": "tpl-mc",
+  "name": "Molten Core – grund",
+  "description": "Tre tanks, fyra healers, decurse och banish utdelade. Rutorna pekar på roller (MT, OT), så de fylls i av sig själva.",
+  "data": {
+   "name": "Molten Core",
+   "sections": [
+    {
+     "id": "tanks",
+     "name": "Tanks",
+     "rows": [
+      {
+       "id": "t1",
+       "role": "MT",
+       "player": null
+      },
+      {
+       "id": "t2",
+       "role": "OT",
+       "player": null
+      },
+      {
+       "id": "t3",
+       "role": "OT 2",
+       "player": null
+      }
+     ]
+    },
+    {
+     "id": "healers",
+     "name": "Healers",
+     "rows": [
+      {
+       "id": "h1",
+       "role": "Healer 1",
+       "player": null
+      },
+      {
+       "id": "h2",
+       "role": "Healer 2",
+       "player": null
+      },
+      {
+       "id": "h3",
+       "role": "Healer 3",
+       "player": null
+      },
+      {
+       "id": "h4",
+       "role": "Healer 4",
+       "player": null
+      }
+     ]
+    },
+    {
+     "id": "ranged",
+     "name": "Ranged",
+     "rows": [
+      {
+       "id": "r1",
+       "role": "Ranged 1",
+       "player": null
+      },
+      {
+       "id": "r2",
+       "role": "Ranged 2",
+       "player": null
+      },
+      {
+       "id": "r3",
+       "role": "Ranged 3",
+       "player": null
+      },
+      {
+       "id": "r4",
+       "role": "Ranged 4",
+       "player": null
+      },
+      {
+       "id": "r5",
+       "role": "Ranged 5",
+       "player": null
+      }
+     ]
+    },
+    {
+     "id": "melee",
+     "name": "Melee",
+     "rows": [
+      {
+       "id": "m1",
+       "role": "Melee 1",
+       "player": null
+      },
+      {
+       "id": "m2",
+       "role": "Melee 2",
+       "player": null
+      },
+      {
+       "id": "m3",
+       "role": "Melee 3",
+       "player": null
+      }
+     ]
+    }
+   ],
+   "columns": [
+    {
+     "id": "mc0",
+     "name": "Trash",
+     "image": null
+    },
+    {
+     "id": "mc1",
+     "name": "Lucifron",
+     "image": "assets/bosses/lucifron.webp"
+    },
+    {
+     "id": "mc2",
+     "name": "Magmadar",
+     "image": "assets/bosses/magmadar.webp"
+    },
+    {
+     "id": "mc3",
+     "name": "Gehennas",
+     "image": "assets/bosses/gehennas.webp"
+    },
+    {
+     "id": "mc4",
+     "name": "Garr",
+     "image": "assets/bosses/garr.webp"
+    },
+    {
+     "id": "mc5",
+     "name": "Shazzrah",
+     "image": "assets/bosses/shazzrah.webp"
+    },
+    {
+     "id": "mc6",
+     "name": "Baron Geddon",
+     "image": "assets/bosses/baron-geddon.webp"
+    },
+    {
+     "id": "mc7",
+     "name": "Golemagg the Incinerator",
+     "image": "assets/bosses/golemagg-the-incinerator.webp"
+    },
+    {
+     "id": "mc8",
+     "name": "Sulfuron Harbinger",
+     "image": "assets/bosses/sulfuron-harbinger.webp"
+    },
+    {
+     "id": "mc9",
+     "name": "Majordomo Executus",
+     "image": "assets/bosses/majordomo-executus.webp"
+    },
+    {
+     "id": "mc10",
+     "name": "Ragnaros",
+     "image": "assets/bosses/ragnaros.webp"
+    }
+   ],
+   "cells": {
+    "t1": {
+     "mc0": "{skull}",
+     "mc1": "Boss",
+     "mc2": "Boss",
+     "mc3": "Boss",
+     "mc4": "Boss",
+     "mc7": "Boss",
+     "mc9": "{skull} Elite",
+     "mc10": "Boss"
+    },
+    "t2": {
+     "mc0": "{x}",
+     "mc1": "Add {moon}",
+     "mc4": "Add {square} {triangle}",
+     "mc7": "Hundarna",
+     "mc9": "{x} Elite",
+     "mc10": "Tar över vid knockback"
+    },
+    "t3": {
+     "mc0": "{moon}",
+     "mc1": "Add {star}",
+     "mc4": "Add {diamond} {circle}",
+     "mc7": "Hundarna",
+     "mc9": "Healers {moon}"
+    },
+    "r1": {
+     "mc1": "Decurse",
+     "mc3": "Decurse",
+     "mc5": "Decurse",
+     "mc10": "Decurse"
+    },
+    "r2": {
+     "mc1": "Decurse",
+     "mc3": "Decurse",
+     "mc5": "Decurse"
+    },
+    "r3": {
+     "mc4": "Banish {square}",
+     "mc9": "Banish {diamond}"
+    },
+    "r4": {
+     "mc2": "Tranq 1",
+     "mc0": "MD MT"
+    },
+    "r5": {
+     "mc2": "Tranq 2",
+     "mc0": "MD OT"
+    },
+    "m3": {
+     "mc1": "Dispel",
+     "mc3": "Dispel"
+    },
+    "h1": {
+     "mc0": "MT",
+     "mc1": "MT",
+     "mc10": "MT"
+    },
+    "h2": {
+     "mc0": "OT",
+     "mc1": "OT"
+    },
+    "h3": {
+     "mc1": "Dispel"
+    }
+   }
+  },
+  "created_by": "m02",
+  "created_at": "2026-10-09T12:00:00Z"
+ }
+]

@@ -1,0 +1,350 @@
+[
+ {
+  "id": "mc",
+  "name": "Molten Core",
+  "size": 40,
+  "columns": [
+   {
+    "name": "Trash",
+    "image": null
+   },
+   {
+    "name": "Lucifron",
+    "image": "assets/bosses/lucifron.webp"
+   },
+   {
+    "name": "Magmadar",
+    "image": "assets/bosses/magmadar.webp"
+   },
+   {
+    "name": "Gehennas",
+    "image": "assets/bosses/gehennas.webp"
+   },
+   {
+    "name": "Garr",
+    "image": "assets/bosses/garr.webp"
+   },
+   {
+    "name": "Shazzrah",
+    "image": "assets/bosses/shazzrah.webp"
+   },
+   {
+    "name": "Baron Geddon",
+    "image": "assets/bosses/baron-geddon.webp"
+   },
+   {
+    "name": "Golemagg the Incinerator",
+    "image": "assets/bosses/golemagg-the-incinerator.webp"
+   },
+   {
+    "name": "Sulfuron Harbinger",
+    "image": "assets/bosses/sulfuron-harbinger.webp"
+   },
+   {
+    "name": "Majordomo Executus",
+    "image": "assets/bosses/majordomo-executus.webp"
+   },
+   {
+    "name": "Ragnaros",
+    "image": "assets/bosses/ragnaros.webp"
+   }
+  ]
+ },
+ {
+  "id": "ony",
+  "name": "Onyxia's Lair",
+  "size": 40,
+  "columns": [
+   {
+    "name": "Trash",
+    "image": null
+   },
+   {
+    "name": "Fas 1",
+    "image": "assets/bosses/onyxia.webp"
+   },
+   {
+    "name": "Fas 2",
+    "image": "assets/bosses/onyxia.webp"
+   },
+   {
+    "name": "Fas 3",
+    "image": "assets/bosses/onyxia.webp"
+   }
+  ]
+ },
+ {
+  "id": "bwl",
+  "name": "Blackwing Lair",
+  "size": 40,
+  "columns": [
+   {
+    "name": "Trash",
+    "image": null
+   },
+   {
+    "name": "Razorgore the Untamed",
+    "image": "assets/bosses/razorgore-the-untamed.webp"
+   },
+   {
+    "name": "Vaelastrasz the Corrupt",
+    "image": "assets/bosses/vaelastrasz-the-corrupt.webp"
+   },
+   {
+    "name": "Broodlord Lashlayer",
+    "image": "assets/bosses/broodlord-lashlayer.webp"
+   },
+   {
+    "name": "Firemaw",
+    "image": "assets/bosses/firemaw.webp"
+   },
+   {
+    "name": "Ebonroc",
+    "image": "assets/bosses/ebonroc.webp"
+   },
+   {
+    "name": "Flamegor",
+    "image": "assets/bosses/flamegor.webp"
+   },
+   {
+    "name": "Chromaggus",
+    "image": "assets/bosses/chromaggus.webp"
+   },
+   {
+    "name": "Nefarian",
+    "image": "assets/bosses/nefarian.webp"
+   }
+  ]
+ },
+ {
+  "id": "zg",
+  "name": "Zul'Gurub",
+  "size": 20,
+  "columns": [
+   {
+    "name": "Trash",
+    "image": null
+   },
+   {
+    "name": "High Priestess Jeklik",
+    "image": null
+   },
+   {
+    "name": "High Priest Venoxis",
+    "image": "assets/bosses/high-priest-venoxis.webp"
+   },
+   {
+    "name": "High Priestess Mar'li",
+    "image": null
+   },
+   {
+    "name": "Bloodlord Mandokir",
+    "image": "assets/bosses/bloodlord-mandokir.webp"
+   },
+   {
+    "name": "Edge of Madness",
+    "image": null
+   },
+   {
+    "name": "Gahz'ranka",
+    "image": null
+   },
+   {
+    "name": "High Priest Thekal",
+    "image": null
+   },
+   {
+    "name": "High Priestess Arlokk",
+    "image": null
+   },
+   {
+    "name": "Jin'do the Hexxer",
+    "image": "assets/bosses/jindo-the-godbreaker.webp"
+   },
+   {
+    "name": "Hakkar",
+    "image": "assets/bosses/avatar-of-hakkar.webp"
+   }
+  ]
+ },
+ {
+  "id": "aq20",
+  "name": "Ruins of Ahn'Qiraj",
+  "size": 20,
+  "columns": [
+   {
+    "name": "Trash",
+    "image": null
+   },
+   {
+    "name": "Kurinnaxx",
+    "image": "assets/bosses/kurinnaxx.webp"
+   },
+   {
+    "name": "General Rajaxx",
+    "image": "assets/bosses/general-rajaxx.webp"
+   },
+   {
+    "name": "Moam",
+    "image": "assets/bosses/moam.webp"
+   },
+   {
+    "name": "Buru the Gorger",
+    "image": "assets/bosses/buru-the-gorger.webp"
+   },
+   {
+    "name": "Ayamiss the Hunter",
+    "image": "assets/bosses/ayamiss-the-hunter.webp"
+   },
+   {
+    "name": "Ossirian the Unscarred",
+    "image": "assets/bosses/ossirian-the-unscarred.webp"
+   }
+  ]
+ },
+ {
+  "id": "aq40",
+  "name": "Temple of Ahn'Qiraj",
+  "size": 40,
+  "columns": [
+   {
+    "name": "Trash",
+    "image": null
+   },
+   {
+    "name": "The Prophet Skeram",
+    "image": "assets/bosses/the-prophet-skeram.webp"
+   },
+   {
+    "name": "Bug Trio",
+    "image": "assets/bosses/silithid-royalty.webp"
+   },
+   {
+    "name": "Battleguard Sartura",
+    "image": "assets/bosses/battleguard-sartura.webp"
+   },
+   {
+    "name": "Fankriss the Unyielding",
+    "image": "assets/bosses/fankriss-the-unyielding.webp"
+   },
+   {
+    "name": "Viscidus",
+    "image": "assets/bosses/viscidus.webp"
+   },
+   {
+    "name": "Princess Huhuran",
+    "image": "assets/bosses/princess-huhuran.webp"
+   },
+   {
+    "name": "Twin Emperors",
+    "image": "assets/bosses/twin-emperors.webp"
+   },
+   {
+    "name": "Ouro",
+    "image": "assets/bosses/ouro.webp"
+   },
+   {
+    "name": "C'Thun",
+    "image": "assets/bosses/c-thun.webp"
+   }
+  ]
+ },
+ {
+  "id": "naxx",
+  "name": "Naxxramas",
+  "size": 40,
+  "columns": [
+   {
+    "name": "Trash",
+    "image": null
+   },
+   {
+    "name": "Anub'Rekhan",
+    "image": "assets/bosses/anub-rekhan.webp"
+   },
+   {
+    "name": "Grand Widow Faerlina",
+    "image": "assets/bosses/grand-widow-faerlina.webp"
+   },
+   {
+    "name": "Maexxna",
+    "image": "assets/bosses/maexxna.webp"
+   },
+   {
+    "name": "Noth the Plaguebringer",
+    "image": "assets/bosses/noth-the-plaguebringer.webp"
+   },
+   {
+    "name": "Heigan the Unclean",
+    "image": "assets/bosses/heigan-the-unclean.webp"
+   },
+   {
+    "name": "Loatheb",
+    "image": "assets/bosses/loatheb.webp"
+   },
+   {
+    "name": "Instructor Razuvious",
+    "image": "assets/bosses/instructor-razuvious.webp"
+   },
+   {
+    "name": "Gothik the Harvester",
+    "image": "assets/bosses/gothik-the-harvester.webp"
+   },
+   {
+    "name": "The Four Horsemen",
+    "image": "assets/bosses/four-horseman.webp"
+   },
+   {
+    "name": "Patchwerk",
+    "image": "assets/bosses/patchwerk.webp"
+   },
+   {
+    "name": "Grobbulus",
+    "image": "assets/bosses/grobbulus.webp"
+   },
+   {
+    "name": "Gluth",
+    "image": "assets/bosses/gluth.webp"
+   },
+   {
+    "name": "Thaddius",
+    "image": "assets/bosses/thaddius.webp"
+   },
+   {
+    "name": "Sapphiron",
+    "image": "assets/bosses/sapphiron.webp"
+   },
+   {
+    "name": "Kel'Thuzad",
+    "image": "assets/bosses/kel-thuzad.webp"
+   }
+  ]
+ },
+ {
+  "id": "ubrs",
+  "name": "Upper Blackrock Spire",
+  "size": 10,
+  "columns": [
+   {
+    "name": "Trash",
+    "image": null
+   },
+   {
+    "name": "Pyroguard Emberseer",
+    "image": "assets/bosses/pyroguard-emberseer.webp"
+   },
+   {
+    "name": "Warchief Rend Blackhand",
+    "image": "assets/bosses/warchief-rend-blackhand.webp"
+   },
+   {
+    "name": "The Beast",
+    "image": "assets/bosses/the-beast.webp"
+   },
+   {
+    "name": "General Drakkisath",
+    "image": "assets/bosses/general-drakkisath.webp"
+   }
+  ]
+ }
+]
