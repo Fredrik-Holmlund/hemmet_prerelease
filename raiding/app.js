@@ -38,10 +38,11 @@ const SIGNUP = {
   full: { name: "Fullt hus", hint: "Rostern är full just nu." },
 };
 const hasRoom = g => g.signup === "open" || g.signup === "ask";
-/* brödsmulor: crumbs([["Raidgrupper", "#raidgrupper"], ["Spiselgänget", "#grupp/x"], ["Assignments"]]), sista delen är där man står.
-   Ingen tillbaka-knapp med pil (borttagen 2026-10-17: smulorna räcker, och pilarna kändes "AI") */
-function crumbs(parts) {
+/* tillbaka-knapp och brödsmulor: crumbs([["Raidgrupper", "#raidgrupper"], ["Spiselgänget", "#grupp/x"], ["Assignments"]])
+   knappen går ett steg upp (näst sista delen), sista delen är där man står. Ingen pil (2026-10-17: pilarna kändes "AI") */
+function crumbs(parts, up = parts.at(-2)) {
   return `<nav class="crumbs" aria-label="Du är här">
+    <a class="btn btn--ghost btn--sm" href="${up[1]}">Tillbaka</a>
     <ol class="crumbs__trail">${parts.map(([label, href], i) => i === parts.length - 1
       ? `<li aria-current="page">${esc(label)}</li>` : `<li><a href="${href}">${esc(label)}</a></li>`).join("")}</ol>
   </nav>`;
