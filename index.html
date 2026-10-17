@@ -21,7 +21,7 @@
   color-scheme: dark;
   --obsidian-950: #04070f; --obsidian-900: #0a1020; --obsidian-850: #0e1628; --obsidian-800: #121b30;
   --azure-600: #1b3a86; --azure-500: #2a58bd; --azure-400: #5b8ff0; --azure-300: #9dbdf7;
-  --navy-500: #343c7a; --navy-600: #222a56;   /* Alliance-bannerns blå: knappar och valda flikar */
+  --act-500: #1286a3; --act-600: #075a70; --act-ink: #efe5d2; --act-rim: #d4bb92;   /* loggans färger: knappar och valda lägen (det man gör) */
   --gold-300: #f0d27a; --gold-400: #d9a93f; --gold-500: #b0822a;
   --bone-50: #f4ede4; --ash-200: #c9bfb5; --ash-300: #a3978c; --stone-400: #6f655d;
   --line: rgba(244, 237, 228, .1); --line-strong: rgba(244, 237, 228, .2);
@@ -73,12 +73,12 @@ section { padding-block: clamp(72px, 10vw, 140px); }
   font: 600 15px/1 var(--font-label); letter-spacing: .12em; text-transform: uppercase; transition: transform .2s, background-color .2s, border-color .2s, color .2s; }
 .btn:hover { transform: translateY(-1px); }
 .btn svg { width: 18px; height: 18px; }
-.btn--primary { background: linear-gradient(180deg, var(--navy-500), var(--navy-600)); color: var(--gold-300); box-shadow: 0 0 0 1px var(--gold-400) inset, 0 10px 30px -12px rgba(52, 60, 122, .9); }
+.btn--primary { background: linear-gradient(180deg, var(--act-500), var(--act-600)); color: var(--act-ink); box-shadow: 0 0 0 1px var(--act-rim) inset, 0 10px 30px -12px rgba(10, 114, 141, .9); }
 .btn--ghost { background: rgba(255, 255, 255, .02); border-color: var(--line-strong); color: var(--text-primary); }
 .btn--ghost:hover { border-color: var(--text-muted); }
 .btn--sm { padding: 9px 14px; font-size: 13px; }
 /* valt = bannerns marinblå med guldkant och guldtext, som Discord-knappen: blått är det man gör, guld det man uppnår */
-.btn[aria-pressed="true"] { background: linear-gradient(180deg, var(--navy-500), var(--navy-600)); color: var(--gold-300); border-color: transparent; box-shadow: 0 0 0 1px var(--gold-400) inset; }
+.btn[aria-pressed="true"] { background: linear-gradient(180deg, var(--act-500), var(--act-600)); color: var(--act-ink); border-color: transparent; box-shadow: 0 0 0 1px var(--act-rim) inset; }
 
 /* ========== TOPBAR ========== */
 .topbar { position: fixed; top: 0; left: 0; right: 0; z-index: 30; display: flex; align-items: center; justify-content: space-between; gap: 18px;
@@ -129,7 +129,7 @@ img.hero__sigil { width: auto; height: 80px; filter: drop-shadow(0 0 22px rgba(2
 /* ========== FÖRHANDSVISNINGEN ========== */
 .demo-badge { position: fixed; right: 14px; bottom: calc(env(safe-area-inset-bottom, 0px) + 14px); z-index: 40; padding: 8px 12px; border-radius: 4px; pointer-events: none;
   font: 400 13px/1 var(--font-label); letter-spacing: .08em; text-transform: uppercase; color: var(--gold-300);
-  background: linear-gradient(180deg, var(--navy-500), var(--navy-600)); box-shadow: 0 0 0 1px var(--gold-400) inset, 0 8px 24px -8px rgba(0,0,0,.8); }
+  background: linear-gradient(180deg, var(--act-500), var(--act-600)); box-shadow: 0 0 0 1px var(--act-rim) inset, 0 8px 24px -8px rgba(0,0,0,.8); }
 
 .ticker { border-block: 1px solid var(--line); background: rgba(10, 16, 32, .6); overflow: hidden; }
 .ticker__row { display: flex; align-items: center; gap: 40px; width: max-content; padding: 14px 0; animation: marquee 60s linear infinite; }
@@ -337,7 +337,7 @@ input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border: 0; bo
 .gear i.img { background: url("live-icons.webp") calc(34px * var(--ix) * -1) calc(34px * var(--iy) * -1) / calc(34px * var(--icc)) auto; opacity: 1; }
 .seg { display: inline-flex; margin-top: 24px; padding: 4px; gap: 4px; border-radius: 6px; background: rgba(244,237,228,.05); border: 1px solid var(--line); flex-wrap: wrap; }
 .seg button { padding: 9px 14px; border: 0; border-radius: 4px; background: transparent; color: var(--text-muted); cursor: pointer; font: 600 14px/1 var(--font-label); letter-spacing: .14em; text-transform: uppercase; }
-.seg button[aria-pressed="true"] { background: linear-gradient(180deg, var(--navy-500), var(--navy-600)); color: var(--gold-300); box-shadow: 0 0 0 1px var(--gold-400) inset; }
+.seg button[aria-pressed="true"] { background: linear-gradient(180deg, var(--act-500), var(--act-600)); color: var(--act-ink); box-shadow: 0 0 0 1px var(--act-rim) inset; }
 .lede + .src { display: flex; }
 /* ========== REKRYTERINGSSIDAN (DEMO_LIVE) ========== */
 /* handritade pilar: en per sida, och de pekar på det man ska prova */
@@ -454,7 +454,7 @@ input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border: 0; bo
 .rolef button { display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px; border-radius: 14px; border: 1px solid var(--line-strong); background: transparent; color: var(--text-muted); cursor: pointer; font: 600 12px/1 var(--font-label); letter-spacing: .12em; text-transform: uppercase; }
 .rolef button svg { width: 12px; height: 12px; }
 .rolef button small { font: 500 11px/1 var(--font-num); letter-spacing: 0; opacity: .7; }
-.rolef button[aria-pressed="true"] { background: linear-gradient(180deg, var(--navy-500), var(--navy-600)); color: var(--gold-300); border-color: transparent; box-shadow: 0 0 0 1px var(--gold-400) inset; }
+.rolef button[aria-pressed="true"] { background: linear-gradient(180deg, var(--act-500), var(--act-600)); color: var(--act-ink); border-color: transparent; box-shadow: 0 0 0 1px var(--act-rim) inset; }
 /* ---------- zonmålningar på tavlan ---------- */
 .zseg::before { background: var(--art) center / cover; filter: blur(6px) saturate(1.25) brightness(.75); opacity: .55; transform: scale(1.15); -webkit-mask-image: none; mask-image: none; }
 .zseg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(4,7,15,.55), rgba(4,7,15,.1) 35%, rgba(4,7,15,.55)); }
@@ -602,7 +602,7 @@ footer { padding: 40px 16px 90px; border-top: 1px solid var(--line); display: fl
 .lb-cls button { width: 30px; height: 30px; border-radius: 50%; border: 2px solid transparent; cursor: pointer; background: var(--c); opacity: .45; transition: opacity .2s, transform .2s; }
 .lb-cls button[aria-pressed="true"] { opacity: 1; border-color: var(--gold-300); transform: scale(1.08); }
 .lb-cls button.all { width: auto; padding: 0 12px; border-radius: 15px; background: rgba(255,255,255,.06); border-color: var(--line-strong); opacity: 1; font: 600 12px/1 var(--font-label); letter-spacing: .16em; text-transform: uppercase; color: var(--text-muted); }
-.lb-cls button.all[aria-pressed="true"] { background: linear-gradient(180deg, var(--navy-500), var(--navy-600)); color: var(--gold-300); border-color: transparent; box-shadow: 0 0 0 1px var(--gold-400) inset; transform: none; }
+.lb-cls button.all[aria-pressed="true"] { background: linear-gradient(180deg, var(--act-500), var(--act-600)); color: var(--act-ink); border-color: transparent; box-shadow: 0 0 0 1px var(--act-rim) inset; transform: none; }
 .lb { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(20px, 3vw, 40px); margin-top: 34px; align-items: stretch; }
 /* vänsterspalten: rubriken för vald lista överst, pallen längst ner på sin scen */
 .lb-left { display: flex; flex-direction: column; justify-content: space-between; gap: 36px; min-width: 0; }
