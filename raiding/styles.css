@@ -1034,3 +1034,29 @@ thead .bd__role, thead .bd__player { color: #b9ab94 !important; }
 .demobar__btn:hover { color: #fff; }
 .stamp { border-color: #cd8a4e !important; color: #f4ede4 !important; background: rgba(36, 22, 10, .92) !important; font-size: 13px !important; }
 .stamp b { color: #cd8a4e; letter-spacing: .08em; text-transform: uppercase; }
+
+/* ========== Visningsläget på hemmet.wtf/raiding: sajtens gemensamma meny + raidingsidans flikar ========== */
+/* den valda sidan: EN guldlinje som åker mellan menyvalen (slideBar i app.js): till det man hovrar, tillbaka till det valda,
+   och från förra sidans val till det nya när man byter sida */
+.topbar .site-nav { position: relative; overflow: visible; }
+.site-nav a { padding: 6px 0; }
+.topbar .site-nav a[aria-current] { color: var(--text-primary); }
+.site-nav__bar { position: absolute; left: 0; bottom: -3px; width: 0; height: 2px; border-radius: 2px; background: var(--gold-300); pointer-events: none;
+  box-shadow: 0 0 10px rgba(240, 210, 122, .5); opacity: 0;
+  transition: transform .45s cubic-bezier(.2, .8, .2, 1), width .45s cubic-bezier(.2, .8, .2, 1), opacity .3s; }
+.topbar__menu { display: none; padding: 8px 12px; border-radius: 4px; border: 1px solid var(--line-strong); background: rgba(255,255,255,.03); color: var(--text-primary);
+  font: 600 13px/1 var(--font-label); letter-spacing: .12em; text-transform: uppercase; cursor: pointer; }
+.subnav { display: flex; justify-content: center; gap: 6px; padding: 10px 16px; border-bottom: 1px solid var(--line); background: rgba(4, 7, 15, .5); overflow-x: auto; scrollbar-width: none; }
+.subnav a { padding: 8px 14px; border-radius: 4px; font: 600 13px/1 var(--font-label); letter-spacing: .1em; text-transform: uppercase; color: var(--text-muted); text-decoration: none; white-space: nowrap; }
+.subnav a:hover { color: var(--text-primary); }
+.subnav a[aria-current="page"] { background: linear-gradient(180deg, var(--act-500), var(--act-600)); color: var(--act-ink); box-shadow: 0 0 0 1px var(--act-rim) inset; }
+@media (max-width: 700px) {
+  .topbar__menu { display: inline-flex; }
+  .site-nav { display: none !important; }
+  .topbar.is-open .site-nav { display: flex !important; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; gap: 0; padding: 4px 16px 12px;
+    background: rgba(4, 7, 15, .96); border-bottom: 1px solid var(--line); }
+  .topbar.is-open .site-nav a { padding: 13px 0; font-size: 16px; border-top: 1px solid var(--line); }
+  .site-nav__bar { display: none; }
+  .topbar .site-nav a[aria-current] { color: var(--gold-300); }
+  .subnav { justify-content: flex-start; }
+}

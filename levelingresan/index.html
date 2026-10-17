@@ -369,6 +369,32 @@ input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border: 0; bo
 .is-recruit:not(.show-case) .demo-badge { display: none; }
 .is-recruit .demo-badge { z-index: 70; }
 .is-recruit .toast, .is-recruit .tip { z-index: 80; }
+/* EN meny för hela hemmet.wtf (samma på /raiding): alltid synlig, genomskinlig över heron, ovanpå levelingresans overlay */
+.is-recruit .topbar { transform: none; z-index: 70; transition: background-color .3s, border-color .3s; }
+.is-recruit:not(.show-case) .topbar.at-top:not(.is-open) { background: transparent; border-bottom-color: transparent; backdrop-filter: none; }
+.is-recruit .showcase { top: var(--tb, 57px); overflow-x: hidden; }
+.is-recruit .showcase__x { top: calc(var(--tb, 57px) + 14px); }
+.topbar__right { display: flex; align-items: center; gap: 22px; min-width: 0; }
+/* den valda sidan: EN guldlinje som åker mellan menyvalen (slideBar i app.js): till det man hovrar, tillbaka till det valda,
+   och från förra sidans val till det nya när man byter sida */
+.topbar .site-nav { position: relative; overflow: visible; }
+.site-nav a { padding: 6px 0; }
+.topbar .site-nav a[aria-current] { color: var(--text-primary); }
+.site-nav__bar { position: absolute; left: 0; bottom: -3px; width: 0; height: 2px; border-radius: 2px; background: var(--gold-300); pointer-events: none;
+  box-shadow: 0 0 10px rgba(240, 210, 122, .5); opacity: 0;
+  transition: transform .45s cubic-bezier(.2, .8, .2, 1), width .45s cubic-bezier(.2, .8, .2, 1), opacity .3s; }
+.topbar__menu { display: none; padding: 8px 12px; border-radius: 4px; border: 1px solid var(--line-strong); background: rgba(255,255,255,.03); color: var(--text-primary);
+  font: 600 13px/1 var(--font-label); letter-spacing: .12em; text-transform: uppercase; cursor: pointer; }
+@media (max-width: 700px) {
+  .topbar__right { gap: 10px; }
+  .topbar__menu { display: inline-flex; }
+  .site-nav { display: none !important; }
+  .topbar.is-open .site-nav { display: flex !important; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; gap: 0; padding: 4px 16px 12px;
+    background: rgba(4,7,15,.96); border-bottom: 1px solid var(--line); }
+  .topbar.is-open .site-nav a { padding: 13px 0; font-size: 16px; border-top: 1px solid var(--line); }
+  .site-nav__bar { display: none; }
+  .topbar .site-nav a[aria-current] { color: var(--gold-300); }
+}
 /* det som bara hör till rekryteringssidan (länkarna till raiding/) */
 .recruit-only { display: none !important; }
 .is-recruit .recruit-only { display: revert !important; }
@@ -927,7 +953,7 @@ dialog.armory::backdrop { background: rgba(2, 4, 10, .72); backdrop-filter: blur
     <p class="eyebrow">Se vad som väntar</p>
     <h2 class="d2" id="chooseTitle">Vad vill du <span>se först</span>?</h2>
     <div class="choose__cards">
-      <a class="choose__card" href="#resan" style="--img:url('ach/choose-leveling.webp')"><small>Från 5 nov</small><b>Levelingresan</b><p>Vem levlar efter läggning? Vem tar ledigt vid release? När Blizzard öppnar sitt API följer vi hela HEMMET från 1 till 60, med en egen dungeon finder på köpet. Kronorna är dina, achievements är hela husets.</p><span class="btn btn--primary btn--sm">Se levelingresan</span></a>
+      <a class="choose__card" href="levelingresan/" style="--img:url('ach/choose-leveling.webp')"><small>Från 5 nov</small><b>Levelingresan</b><p>Vem levlar efter läggning? Vem tar ledigt vid release? När Blizzard öppnar sitt API följer vi hela HEMMET från 1 till 60, med en egen dungeon finder på köpet. Kronorna är dina, achievements är hela husets.</p><span class="btn btn--primary btn--sm">Se levelingresan</span></a>
       <a class="choose__card" href="raiding/" style="--img:url('ach/choose-raiding.webp')"><small>Från december</small><b>Raiding</b><p>Inga fler kalkylark i fem olika Discord-kanaler. När vi börjar raida har HEMMET ett eget verktyg: se hur vi raidar, hitta din grupp, och se vem som håller i nycklarna och vem som har koll på loot.</p><span class="btn btn--primary btn--sm">Se hur vi raidar</span></a>
     </div>
   </div>
@@ -1823,14 +1849,69 @@ if (ME) { $("who").value = ME.name; setMe(ME.name, true); }
 // ============================================================================
 // REKRYTERINGSSIDAN: demons sektioner öppnas i en overlay från heron och menyn
 // ============================================================================
+/* Guldlinjen under menyn (samma kod i leveling-sidans och intranätets app.js): en linje som åker till det man hovrar,
+   tillbaka till den valda sidan, och vid sidbyte från förra sidans val till det nya (läget sparas i sessionStorage).
+   Returnerar en funktion att anropa när den valda sidan byts utan sidladdning. */
+function slideBar(nav) {
+  const bar = document.createElement("span");
+  bar.className = "site-nav__bar"; nav.append(bar);
+  const current = () => nav.querySelector("a[aria-current]");
+  const jump = (fn) => { bar.style.transition = "none"; fn(); void bar.offsetWidth; bar.style.transition = ""; };
+  const place = (a) => {
+    if (!a) { bar.style.opacity = "0"; return; }
+    bar.style.width = a.offsetWidth + "px"; bar.style.transform = `translateX(${a.offsetLeft}px)`;
+    bar.style.opacity = a.hasAttribute("aria-current") ? "1" : ".5";
+  };
+  let from = null;
+  try { from = JSON.parse(sessionStorage.getItem("hemmet-navbar") ?? "null"); sessionStorage.removeItem("hemmet-navbar"); } catch { /* utan lagring: ingen åkning vid sidbyte */ }
+  if (from && current()) {
+    jump(() => { bar.style.width = from.w + "px"; bar.style.transform = `translateX(${from.x}px)`; bar.style.opacity = "1"; });
+    requestAnimationFrame(() => requestAnimationFrame(() => place(current())));
+  } else jump(() => place(current()));
+  nav.addEventListener("mouseover", (e) => { const a = e.target.closest("a"); if (a && nav.contains(a)) place(a); });
+  nav.addEventListener("mouseleave", () => place(current()));
+  const again = () => jump(() => place(current()));
+  addEventListener("resize", again); document.fonts?.ready.then(again);
+  addEventListener("pagehide", () => {
+    const a = current();
+    if (a) try { sessionStorage.setItem("hemmet-navbar", JSON.stringify({ x: a.offsetLeft, w: a.offsetWidth })); } catch { /* ingen lagring */ }
+  });
+  return () => place(current());
+}
+
 if (RECRUIT) {
   document.body.classList.add("is-recruit");
+  // Overlayen byter adress till /levelingresan/ (pushState). Utan <base> skulle relativa länkar (raiding/, bilder) då
+  // räknas från den adressen och bli /levelingresan/raiding/. Kopian på /levelingresan/ har redan <base href="../">.
+  if (!document.querySelector("base")) { const base = document.createElement("base"); base.href = new URL(".", location.href).href; document.head.prepend(base); }
   fetchDiscord(); setInterval(fetchDiscord, 5 * 60e3);
   const second = $("heroSecond");
   second.textContent = "Se vad som väntar"; second.classList.replace("btn--ghost", "btn--primary");
   const discord = document.querySelector("#hero .btn-row > a.btn--primary"); if (discord) discord.classList.replace("btn--primary", "btn--ghost");
   $("heroArrow").hidden = false;
-  document.querySelector(".topbar nav").innerHTML = `<a href="#resan">Levelingresan</a><a href="raiding/">Raiding</a><a href="#faq">FAQ</a><a href="#join">Flytta in</a>`;
+  // EN meny för hela hemmet.wtf, samma som på /raiding (VISNING i intranätets app.js): alltid synlig, genomskinlig över
+  // heron, och den ligger kvar ovanpå levelingresan. På mobil fälls länkarna ihop bakom "Meny".
+  const bar = $("topbar");
+  bar.querySelector("nav").remove();
+  bar.insertAdjacentHTML("beforeend", `<div class="topbar__right">
+    <nav class="site-nav" id="siteNav" aria-label="HEMMET"><a href="#top" data-site="hem">Hem</a><a href="levelingresan/" data-site="levelingresan">Levelingresan</a><a href="raiding/">Raiding</a><a href="#faq">Om oss</a></nav>
+    <a class="btn btn--primary btn--sm" href="#join">Flytta in</a>
+    <button class="topbar__menu" type="button" aria-expanded="false" aria-controls="siteNav">Meny</button></div>`);
+  new IntersectionObserver(([e]) => bar.classList.toggle("at-top", e.isIntersecting), { threshold: .15 }).observe($("hero"));
+  const setTb = () => document.documentElement.style.setProperty("--tb", bar.offsetHeight + "px");
+  setTb(); addEventListener("resize", setTb);
+  const menuBtn = bar.querySelector(".topbar__menu");
+  const closeMenu = () => { bar.classList.remove("is-open"); menuBtn.setAttribute("aria-expanded", "false"); };
+  menuBtn.addEventListener("click", () => menuBtn.setAttribute("aria-expanded", String(bar.classList.toggle("is-open"))));
+  // Hem eller Levelingresan är vald beroende på om overlayen är öppen; linjen under glider över när den byts
+  const markSite = () => {
+    const here = document.body.classList.contains("show-case") ? "levelingresan" : "hem";
+    bar.querySelectorAll("[data-site]").forEach(a => { if (a.dataset.site === here) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); });
+    moveBar?.();
+  };
+  let moveBar = null;
+  markSite();
+  moveBar = slideBar($("siteNav"));
   const showcase = $("showcase");
   // Overlayen har en egen adress: hemmet.wtf/levelingresan/ (byggs av bygg.py: samma sida med <base href="../">).
   // Öppna = adressen blir /levelingresan/, stänga = tillbaka till /, och webbläsarens bakåtknapp stänger den.
@@ -1838,12 +1919,12 @@ if (RECRUIT) {
   const atCase = () => location.pathname.endsWith("/levelingresan/") || location.pathname.endsWith("/levelingresan");
   const HOME_TITLE = "HEMMET – svensk guild i WoW Forever", CASE_TITLE = "Levelingresan · " + HOME_TITLE;
   const openCase = (push = true) => {
-    document.body.classList.add("show-case"); showcase.scrollTop = 0; document.title = CASE_TITLE;
+    document.body.classList.add("show-case"); showcase.scrollTop = 0; document.title = CASE_TITLE; markSite();
     if (push && !atCase()) history.pushState({ hemmetCase: 1 }, "", CASE_URL);
     requestAnimationFrame(() => { drawBoard(); dispatchEvent(new Event("resize")); });
   };
   const closeCase = (push = true) => {
-    document.body.classList.remove("show-case"); stop(); document.title = HOME_TITLE;
+    document.body.classList.remove("show-case"); stop(); document.title = HOME_TITLE; markSite();
     if (push && atCase()) history.pushState(null, "", ROOT);
   };
   addEventListener("popstate", () => { if (atCase()) openCase(false); else closeCase(false); });
@@ -1862,11 +1943,21 @@ if (RECRUIT) {
   if (atCase()) openCase(false);   // hemmet.wtf/levelingresan
   else if (CASE.includes(location.hash.slice(1))) { history.replaceState(null, "", CASE_URL); openCase(false); }   // äldre länkar: /#resan
   document.addEventListener("click", (e) => {
-    const a = e.target.closest("a[href^='#']"); if (!a) return;
-    const id = a.getAttribute("href").slice(1);
+    const a = e.target.closest("a[href]"); if (!a) return;
+    const href = a.getAttribute("href");
+    if (bar.contains(a)) closeMenu();
+    if (href === "levelingresan/") { e.preventDefault(); closeChoose(); openCase(); return; }
+    if (!href.startsWith("#")) return;
+    const id = href.slice(1);
     if (a.id === "heroSecond") { e.preventDefault(); openChoose(); return; }
     if (CASE.includes(id) && !showcase.contains(a)) { e.preventDefault(); closeChoose(); openCase(); return; }
-    if (showcase.contains(a) && (id === "faq" || id === "join")) { e.preventDefault(); closeCase(); $(id).scrollIntoView({ behavior: "smooth" }); }
+    // Om oss, Flytta in och loggan: stäng levelingresan om den är öppen och scrolla dit (på /levelingresan/ pekar
+    // <base href="../"> annars ut till en ny sidladdning)
+    if (id === "faq" || id === "join" || id === "top") {
+      e.preventDefault(); closeChoose();
+      if (document.body.classList.contains("show-case")) closeCase();
+      if (id === "top") scrollTo({ top: 0, behavior: "smooth" }); else $(id).scrollIntoView({ behavior: "smooth" });
+    }
   }, true);
 }
 

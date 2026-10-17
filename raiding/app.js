@@ -881,13 +881,56 @@ function bind() {
 
 }
 
+/* Guldlinjen under menyn (samma kod i leveling-sidans och intranätets app.js): en linje som åker till det man hovrar,
+   tillbaka till den valda sidan, och vid sidbyte från förra sidans val till det nya (läget sparas i sessionStorage).
+   Returnerar en funktion att anropa när den valda sidan byts utan sidladdning. */
+function slideBar(nav) {
+  const bar = document.createElement("span");
+  bar.className = "site-nav__bar"; nav.append(bar);
+  const current = () => nav.querySelector("a[aria-current]");
+  const jump = (fn) => { bar.style.transition = "none"; fn(); void bar.offsetWidth; bar.style.transition = ""; };
+  const place = (a) => {
+    if (!a) { bar.style.opacity = "0"; return; }
+    bar.style.width = a.offsetWidth + "px"; bar.style.transform = `translateX(${a.offsetLeft}px)`;
+    bar.style.opacity = a.hasAttribute("aria-current") ? "1" : ".5";
+  };
+  let from = null;
+  try { from = JSON.parse(sessionStorage.getItem("hemmet-navbar") ?? "null"); sessionStorage.removeItem("hemmet-navbar"); } catch { /* utan lagring: ingen åkning vid sidbyte */ }
+  if (from && current()) {
+    jump(() => { bar.style.width = from.w + "px"; bar.style.transform = `translateX(${from.x}px)`; bar.style.opacity = "1"; });
+    requestAnimationFrame(() => requestAnimationFrame(() => place(current())));
+  } else jump(() => place(current()));
+  nav.addEventListener("mouseover", (e) => { const a = e.target.closest("a"); if (a && nav.contains(a)) place(a); });
+  nav.addEventListener("mouseleave", () => place(current()));
+  const again = () => jump(() => place(current()));
+  addEventListener("resize", again); document.fonts?.ready.then(again);
+  addEventListener("pagehide", () => {
+    const a = current();
+    if (a) try { sessionStorage.setItem("hemmet-navbar", JSON.stringify({ x: a.offsetLeft, w: a.offsetWidth })); } catch { /* ingen lagring */ }
+  });
+  return () => place(current());
+}
+
 loadData().then(data => {
   RAW = data;
   D = index(RAW);
   try { me = VISNING ? null : D.member[localStorage.getItem(ME_KEY)] ?? null; } catch { me = null; }
   if (VISNING) {   // en del av hemmet.wtf: loggan leder hem, och det man provar sparas inte
-    $(".demobar__text").textContent = "Så här kommer raidgrupperna att se ut. Namnen är påhittade, och det du ändrar försvinner när du laddar om sidan.";
+    $(".demobar__text").textContent = "Påhittad data";
     document.querySelectorAll(".topbar__brand, .foot__brand").forEach(a => { a.href = "../"; });
+    // EN meny för hela hemmet.wtf, samma som på huvudsidan: Levelingresan · Raiding · Om oss (+ Flytta in i #account).
+    // Sidans egna delar (Översikt · Raidgrupper · Roller & ansvar) blir flikar under menyn; route() markerar dem som vanligt.
+    const own = $(".topbar nav"), sub = document.createElement("nav");
+    sub.className = "subnav"; sub.setAttribute("aria-label", "Raiding");
+    sub.innerHTML = own.innerHTML;
+    sub.querySelector('[data-nav="start"]').textContent = "Översikt";
+    own.outerHTML = `<nav class="site-nav" id="siteNav" aria-label="HEMMET"><a href="../">Hem</a><a href="../levelingresan/">Levelingresan</a><a href="#start" aria-current="page">Raiding</a><a href="../#faq">Om oss</a></nav>`;
+    $(".topbar").after(sub);
+    slideBar($("#siteNav"));
+    $(".topbar__right").insertAdjacentHTML("beforeend", `<button class="topbar__menu" type="button" aria-expanded="false" aria-controls="siteNav">Meny</button>`);
+    const bar = $(".topbar"), menuBtn = $(".topbar__menu");
+    menuBtn.addEventListener("click", () => menuBtn.setAttribute("aria-expanded", String(bar.classList.toggle("is-open"))));
+    bar.addEventListener("click", e => { if (e.target.closest(".site-nav a")) { bar.classList.remove("is-open"); menuBtn.setAttribute("aria-expanded", "false"); } });
   }
   refresh(); bind(); route();
 }).catch(err => {
