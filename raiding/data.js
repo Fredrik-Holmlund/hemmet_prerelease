@@ -32,6 +32,7 @@ const SEED_VERSION = 2;
 let db = null;
 
 function persist() {
+  if (document.documentElement.hasAttribute("data-visning")) return;   // visningsläget: ändringarna lever bara i sidvisningen
   try { localStorage.setItem(KEY, JSON.stringify({ seed: SEED_VERSION, ...Object.fromEntries(EDITABLE.map(t => [t, db[t]])) })); } catch { /* privat läge: ändringarna lever bara tills sidan laddas om */ }
 }
 

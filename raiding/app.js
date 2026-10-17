@@ -9,8 +9,9 @@ const CLASS_COLORS = {
 // raden "Raid Master" i bemanningstabellen är ingen funktion men står först
 const RM_SLOT = { id: "raid_master", name: "Raid Master", purpose: "Helhetsansvar för gruppen." };
 const LINK_NAMES = { thread: "Gruppens tråd på Discord" };   // övriga länkar togs bort 2026-10-12
-// Visningsläget (hemmet.wtf/raiding/): samma sida för alla besökare, utan inloggning och redigering och utan sparade
-// demoändringar. Byggskriptet i hemmet.wtf_leveling_plus_raiding sätter <html data-visning>.
+// Visningsläget (hemmet.wtf/raiding/): samma sida för alla besökare. Man kan prova som ledning eller Raid Master,
+// men inget sparas: varje sidladdning börjar med exempeldatan och utloggad. Byggskriptet i
+// hemmet.wtf_leveling_plus_raiding sätter <html data-visning>.
 const VISNING = document.documentElement.hasAttribute("data-visning");
 const PAGE_TITLE = document.title;   // i visningsläget sökbara titeln från bygget, som startsidan behåller
 
@@ -558,10 +559,11 @@ function titleOf(m) {
 }
 
 function renderAccount() {
-  if (VISNING) { $("#account").innerHTML = `<a class="btn btn--primary btn--sm" href="../#join">Flytta in</a>`; return; }
-  $("#account").innerHTML = me
+  const acct = me
     ? `<button class="acct" data-account style="--c:${CLASS_COLORS[me.class] ?? "#fff"}"><b>${esc(me.character)}</b><small>${esc(titleOf(me))}</small></button>`
     : `<button class="btn btn--primary btn--sm" data-account>Logga in</button>`;
+  // på hemmet.wtf: Flytta in alltid, och den man provar som när man har valt någon
+  $("#account").innerHTML = VISNING ? `${me ? acct : ""}<a class="btn btn--primary btn--sm" href="../#join">Flytta in</a>` : acct;
 }
 
 function accountDrawer() {
@@ -594,7 +596,7 @@ function accountDrawer() {
 
 function login(id) {
   me = (id && D.member[id]) || null;
-  try { if (me) localStorage.setItem(ME_KEY, me.id); else localStorage.removeItem(ME_KEY); } catch { /* bara för den här sidvisningen */ }
+  if (!VISNING) try { if (me) localStorage.setItem(ME_KEY, me.id); else localStorage.removeItem(ME_KEY); } catch { /* bara för den här sidvisningen */ }
   refresh(); route();
 }
 
@@ -749,7 +751,7 @@ function denied() {
   $("#groupPage").innerHTML = `<div class="wrap gp"><div class="gp__bar">${crumbs([["Raidgrupper", "#raidgrupper"], ["Låst"]])}</div>
     <p class="eyebrow">Låst dörr</p><h1 class="d2">Här behövs <span>nycklar</span></h1>
     <p class="lede">Det här kan bara ledningen eller gruppens Raid Master ändra.</p>
-    ${me || VISNING ? "" : `<p style="margin-top:28px"><button class="btn btn--primary" data-account>Logga in</button></p>`}</div>`;
+    ${me ? "" : `<p style="margin-top:28px"><button class="btn btn--primary" data-account>${VISNING ? "Prova som ledning eller Raid Master" : "Logga in"}</button></p>`}</div>`;
   return "Låst";
 }
 
@@ -883,9 +885,8 @@ loadData().then(data => {
   RAW = data;
   D = index(RAW);
   try { me = VISNING ? null : D.member[localStorage.getItem(ME_KEY)] ?? null; } catch { me = null; }
-  if (VISNING) {   // en del av hemmet.wtf: loggan leder hem, och ingen demo-inloggning
-    $(".demobar__text").textContent = "Så här kommer raidgrupperna att se ut. Namnen och grupperna är påhittade.";
-    $(".demobar__btn")?.remove();
+  if (VISNING) {   // en del av hemmet.wtf: loggan leder hem, och det man provar sparas inte
+    $(".demobar__text").textContent = "Så här kommer raidgrupperna att se ut. Namnen är påhittade, och det du ändrar försvinner när du laddar om sidan.";
     document.querySelectorAll(".topbar__brand, .foot__brand").forEach(a => { a.href = "../"; });
   }
   refresh(); bind(); route();
