@@ -62,7 +62,8 @@ section + section { border-top: 1px solid var(--line); }
 .hero { position: relative; isolation: isolate; overflow: hidden; padding: clamp(70px, 10vw, 130px) 0 clamp(56px, 7vw, 90px); text-align: center; }
 .hero .eyebrow { justify-content: center; }
 .hero .lede { margin-inline: auto; }
-.hero__art { position: absolute; inset: 0; z-index: -1; background: url("assets/hero.webp") center 35% / cover; filter: grayscale(.5) brightness(.55) contrast(1.1); opacity: .45;
+/* Molten Core: guildens första raid (samma bild som Raiding-kortet på hemmet.wtf). Elwynns karta finns kvar som hero-elwynn-karta.webp */
+.hero__art { position: absolute; inset: 0; z-index: -1; background: url("assets/hero.webp") center 55% / cover; filter: grayscale(.1) brightness(.72) contrast(1.05); opacity: .8;
   -webkit-mask-image: radial-gradient(ellipse 70% 70% at 50% 40%, #000 20%, transparent 75%); mask-image: radial-gradient(ellipse 70% 70% at 50% 40%, #000 20%, transparent 75%); }
 
 /* ========== NAMN (klassfärg bara på namnet) ========== */
