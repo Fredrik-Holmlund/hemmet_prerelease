@@ -1,69 +1,69 @@
-[
-  {
-    "id": "guild_master",
-    "level": 1,
-    "name": "Guild Master",
-    "short": "Övergripande ansvar för HEMMET, dess vision och långsiktiga utveckling.",
-    "description": "Guild Master har det yttersta ansvaret för HEMMET som organisation. Rollen handlar om att sätta riktningen, bygga en fungerande ledningsstruktur och skapa rätt förutsättningar för guildens medlemmar och ledare.\n\nNär frågor inte kan lösas på andra nivåer är det Guild Master som har det slutgiltiga mandatet.",
-    "responsibilities": [
-      "Vision och långsiktig riktning",
-      "Guildens organisation och ledningsstruktur",
-      "Slutgiltiga beslut i guildövergripande frågor"
-    ],
-    "mandate": "Sista ordet i guildövergripande frågor."
-  },
-  {
-    "id": "guild_leader",
-    "level": 1,
-    "name": "Guild Leader",
-    "short": "Strategi, kultur, utveckling och samordning.",
-    "description": "Guild Leaders ansvarar för att utveckla HEMMET som helhet. De arbetar med organisation, rekrytering, guildkultur, gemensamma riktlinjer och långsiktig planering.\n\nEn viktig del av rollen är att stötta Raid Masters, samordna frågor mellan raidgrupper och se till att guilden fungerar som ett gemensamt community.",
-    "responsibilities": [
-      "Organisation och ledarskapsutveckling",
-      "Rekrytering och communityutveckling",
-      "Kultur och gemensamma riktlinjer",
-      "Playbooks och policies",
-      "Samordning mellan raidgrupper",
-      "Stöd till Raid Masters",
-      "Frågor som inte kan lösas inom en enskild raidgrupp"
-    ],
-    "mandate": "Skapar förutsättningarna och tar emot frågor som lyfts från raidgrupperna. Detaljstyr inte enskilda raider."
-  },
-  {
-    "id": "raid_master",
-    "level": 2,
-    "name": "Raid Master",
-    "short": "Helhetsansvar för en raidgrupp.",
-    "description": "Raid Master ansvarar för sin raidgrupp och ser till att planering, bemanning, lootadministration, förberedelser och genomförande fungerar.\n\nRollen omfattar även att utse Raid Leader och vara första kontaktperson vid frågor eller synpunkter som rör gruppen.\n\nRaid Master behöver inte utföra varje uppgift själv, men ansvarar alltid för att arbetet blir gjort.",
-    "responsibilities": [
-      "De sex obligatoriska funktionerna i gruppen",
-      "Att utse Raid Leader",
-      "Första kontaktperson för gruppen"
-    ],
-    "mandate": "Bestämmer över bemanning, uttagning och delegering i sin grupp, inom guildens playbook. Det som inte går att lösa i gruppen lyfts till Guild Leaders."
-  },
-  {
-    "id": "raid_leader",
-    "level": 3,
-    "name": "Raid Leader",
-    "short": "Taktisk ledning, koordinering och beslut under raiden.",
-    "description": "Raid Leader håller taktpinnen under själva raiden. Rollen ansvarar för taktik, calls, tempo, pulls och att gruppen arbetar mot gemensamma mål.\n\nFlera spelare kan bidra med information och taktiska calls, men en utsedd Raid Leader har sista ordet när ett beslut behöver fattas.\n\nRaid Master kan även själv vara Raid Leader.",
-    "responsibilities": [
-      "Taktik och calls",
-      "Tempo och pulls",
-      "Beslut under raiden"
-    ],
-    "mandate": "Sista ordet i calls under raiden."
-  },
-  {
-    "id": "raid_admin",
-    "level": 3,
-    "name": "Raid Admin",
-    "short": "Operativt stöd och administration för raidgruppen.",
-    "description": "Raid Admin hjälper till med en eller flera praktiska funktioner runt raiden. Det kan handla om att skapa signups, administrera roster, hantera loot eller uppdatera assignment-dokument.\n\nRollen är flexibel och behöver inte finnas i varje raidgrupp.\n\nRaid Master avgör hur arbetet fördelas och behåller alltid helhetsansvaret.",
-    "responsibilities": [
-      "De funktioner Raid Master har delegerat"
-    ],
-    "mandate": "Det som Raid Master har lämnat över. Helhetsansvaret stannar hos Raid Master."
-  }
+[
+  {
+    "id": "guild_master",
+    "level": 1,
+    "name": "Guild Master",
+    "short": "Övergripande ansvar för HEMMET, dess vision och långsiktiga utveckling.",
+    "description": "Guild Master har det yttersta ansvaret för HEMMET som organisation. Rollen handlar om att sätta riktningen, bygga en fungerande ledningsstruktur och skapa rätt förutsättningar för guildens medlemmar och ledare.\n\nNär frågor inte kan lösas på andra nivåer är det Guild Master som har det slutgiltiga mandatet.",
+    "responsibilities": [
+      "Vision och långsiktig riktning",
+      "Guildens organisation och ledningsstruktur",
+      "Slutgiltiga beslut i guildövergripande frågor"
+    ],
+    "mandate": "Sista ordet i guildövergripande frågor."
+  },
+  {
+    "id": "guild_leader",
+    "level": 1,
+    "name": "Guild Leader",
+    "short": "Strategi, kultur, utveckling och samordning.",
+    "description": "Guild Leaders ansvarar för att utveckla HEMMET som helhet. De arbetar med organisation, rekrytering, guildkultur, gemensamma riktlinjer och långsiktig planering.\n\nEn viktig del av rollen är att stötta Raid Masters, samordna frågor mellan raidgrupper och se till att guilden fungerar som ett gemensamt community.",
+    "responsibilities": [
+      "Organisation och ledarskapsutveckling",
+      "Rekrytering och communityutveckling",
+      "Kultur och gemensamma riktlinjer",
+      "Playbooks och policies",
+      "Samordning mellan raidgrupper",
+      "Stöd till Raid Masters",
+      "Frågor som inte kan lösas inom en enskild raidgrupp"
+    ],
+    "mandate": "Skapar förutsättningarna och tar emot frågor som lyfts från raidgrupperna. Detaljstyr inte enskilda raider."
+  },
+  {
+    "id": "raid_master",
+    "level": 2,
+    "name": "Raid Master",
+    "short": "Helhetsansvar för en raidgrupp.",
+    "description": "Raid Master ansvarar för sin raidgrupp och ser till att planering, bemanning, lootadministration, förberedelser och genomförande fungerar.\n\nRollen omfattar även att utse Raid Leader och vara första kontaktperson vid frågor eller synpunkter som rör gruppen.\n\nRaid Master behöver inte utföra varje uppgift själv, men ansvarar alltid för att arbetet blir gjort.",
+    "responsibilities": [
+      "De sex obligatoriska funktionerna i gruppen",
+      "Att utse Raid Leader",
+      "Första kontaktperson för gruppen"
+    ],
+    "mandate": "Bestämmer över bemanning, uttagning och delegering i sin grupp, inom guildens playbook. Det som inte går att lösa i gruppen lyfts till Guild Leaders."
+  },
+  {
+    "id": "raid_leader",
+    "level": 3,
+    "name": "Raid Leader",
+    "short": "Taktisk ledning, koordinering och beslut under raiden.",
+    "description": "Raid Leader håller taktpinnen under själva raiden. Rollen ansvarar för taktik, calls, tempo, pulls och att gruppen arbetar mot gemensamma mål.\n\nFlera spelare kan bidra med information och taktiska calls, men en utsedd Raid Leader har sista ordet när ett beslut behöver fattas.\n\nRaid Master kan även själv vara Raid Leader.",
+    "responsibilities": [
+      "Taktik och calls",
+      "Tempo och pulls",
+      "Beslut under raiden"
+    ],
+    "mandate": "Sista ordet i calls under raiden."
+  },
+  {
+    "id": "raid_admin",
+    "level": 3,
+    "name": "Raid Admin",
+    "short": "Operativt stöd och administration för raidgruppen.",
+    "description": "Raid Admin hjälper till med en eller flera praktiska funktioner runt raiden. Det kan handla om att skapa signups, administrera roster, hantera loot eller uppdatera assignment-dokument.\n\nRollen är flexibel och behöver inte finnas i varje raidgrupp.\n\nRaid Master avgör hur arbetet fördelas och behåller alltid helhetsansvaret.",
+    "responsibilities": [
+      "De funktioner Raid Master har delegerat"
+    ],
+    "mandate": "Det som Raid Master har lämnat över. Helhetsansvaret stannar hos Raid Master."
+  }
 ]

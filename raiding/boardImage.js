@@ -58,7 +58,7 @@ export async function boardImage({ title, subtitle, columns, sections, tokens, f
     : x.t === "text" ? textW(x.v, `400 13px ${F.body}`)
     : x.t === "mk" ? 20
     : x.t === "chip" ? textW(x.player.name, `600 13px ${F.body}`) + 18
-    : textW(x.role, `600 11px ${F.body}`) + 13 + textW(x.player?.name ?? "–", `600 13px ${F.body}`) + 18;
+    : textW(x.role, `600 11px ${F.body}`) + 13 + textW(x.player?.name ?? "-", `600 13px ${F.body}`) + 18;
   const layout = (toks, maxW) => {
     const lines = [[]];
     let w = 0;
@@ -174,7 +174,7 @@ export async function boardImage({ title, subtitle, columns, sections, tokens, f
     if (t.t === "text") { font(`400 13px ${F.body}`); g.fillStyle = C.ash; g.fillText(t.v, x, y + .5); }
     else if (t.t === "mk") { const m = markers[t.k]; if (m) g.drawImage(m, x + 1, y - 9, 18, 18); }
     else if (t.t === "chip") chip(x, y, t.player.name, t.player.color);
-    else if (t.t === "role") chip(x, y, t.player?.name ?? "–", t.player?.color ?? "#8a8178", t.role);
+    else if (t.t === "role") chip(x, y, t.player?.name ?? "-", t.player?.color ?? "#8a8178", t.role);
   };
 
   let y = top + HEAD_H;
@@ -194,7 +194,7 @@ export async function boardImage({ title, subtitle, columns, sections, tokens, f
         g.fillStyle = r.player.color; g.fillRect(PAD + ROLE_W, y, PLAYER_W, r.h - 1);
         font(`700 13px ${F.body}`); g.fillStyle = textOn(r.player.color); g.fillText(r.player.name, PAD + ROLE_W + 10, mid + .5);
       }
-      else { g.fillStyle = C.faint; g.fillText("–", PAD + ROLE_W + 10, mid); }
+      else { g.fillStyle = C.faint; g.fillText("-", PAD + ROLE_W + 10, mid); }
       r.cells.forEach((lines, i) => {
         const cx = PAD + ROLE_W + PLAYER_W + i * COL_W;
         const y0 = mid - (lines.length - 1) * LINE_H / 2;

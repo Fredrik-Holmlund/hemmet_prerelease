@@ -1,227 +1,227 @@
-[
-  {
-    "group_id": "spiselganget",
-    "slot": "raid_master",
-    "member_id": "m05"
-  },
-  {
-    "group_id": "spiselganget",
-    "slot": "leadership",
-    "member_id": "m05"
-  },
-  {
-    "group_id": "spiselganget",
-    "slot": "signups",
-    "member_id": "m06"
-  },
-  {
-    "group_id": "spiselganget",
-    "slot": "roster",
-    "member_id": "m05"
-  },
-  {
-    "group_id": "spiselganget",
-    "slot": "loot",
-    "member_id": "m07"
-  },
-  {
-    "group_id": "spiselganget",
-    "slot": "assignments",
-    "member_id": "m06"
-  },
-  {
-    "group_id": "spiselganget",
-    "slot": "assignments",
-    "member_id": "m08"
-  },
-  {
-    "group_id": "kvallsfikat",
-    "slot": "raid_master",
-    "member_id": "m09"
-  },
-  {
-    "group_id": "kvallsfikat",
-    "slot": "leadership",
-    "member_id": "m10"
-  },
-  {
-    "group_id": "kvallsfikat",
-    "slot": "loot",
-    "member_id": "m11"
-  },
-  {
-    "group_id": "kvallsfikat",
-    "slot": "assignments",
-    "member_id": "m10"
-  },
-  {
-    "group_id": "nattskiftet",
-    "slot": "raid_master",
-    "member_id": "m03"
-  },
-  {
-    "group_id": "nattskiftet",
-    "slot": "leadership",
-    "member_id": "m12"
-  },
-  {
-    "group_id": "nattskiftet",
-    "slot": "signups",
-    "member_id": "m13"
-  },
-  {
-    "group_id": "nattskiftet",
-    "slot": "roster",
-    "member_id": "m03"
-  },
-  {
-    "group_id": "nattskiftet",
-    "slot": "loot",
-    "member_id": "m13"
-  },
-  {
-    "group_id": "nattskiftet",
-    "slot": "assignments",
-    "member_id": "m12"
-  },
-  {
-    "group_id": "nattskiftet",
-    "slot": "assignments",
-    "member_id": "m14"
-  },
-  {
-    "group_id": "nattskiftet",
-    "slot": "feedback",
-    "member_id": "m03"
-  },
-  {
-    "group_id": "sondagsrundan",
-    "slot": "raid_master",
-    "member_id": "m08"
-  },
-  {
-    "group_id": "bastuklubben",
-    "slot": "raid_master",
-    "member_id": "m15"
-  },
-  {
-    "group_id": "kakelugnen",
-    "slot": "raid_master",
-    "member_id": "m16"
-  },
-  {
-    "group_id": "kakelugnen",
-    "slot": "leadership",
-    "member_id": "m17"
-  },
-  {
-    "group_id": "kakelugnen",
-    "slot": "assignments",
-    "member_id": "m18"
-  },
-  {
-    "group_id": "vardagsrummet",
-    "slot": "raid_master",
-    "member_id": "m19"
-  },
-  {
-    "group_id": "vardagsrummet",
-    "slot": "leadership",
-    "member_id": "m20"
-  },
-  {
-    "group_id": "vardagsrummet",
-    "slot": "feedback",
-    "member_id": "m21"
-  },
-  {
-    "group_id": "vardagsrummet",
-    "slot": "loot",
-    "member_id": "m22"
-  },
-  {
-    "group_id": "glasverandan",
-    "slot": "raid_master",
-    "member_id": "m23"
-  },
-  {
-    "group_id": "glasverandan",
-    "slot": "leadership",
-    "member_id": "m24"
-  },
-  {
-    "group_id": "glasverandan",
-    "slot": "signups",
-    "member_id": "m25"
-  },
-  {
-    "group_id": "glasverandan",
-    "slot": "roster",
-    "member_id": "m26"
-  },
-  {
-    "group_id": "grytan",
-    "slot": "raid_master",
-    "member_id": "m27"
-  },
-  {
-    "group_id": "grytan",
-    "slot": "leadership",
-    "member_id": "m28"
-  },
-  {
-    "group_id": "grytan",
-    "slot": "assignments",
-    "member_id": "m29"
-  },
-  {
-    "group_id": "tvattstugan",
-    "slot": "raid_master",
-    "member_id": "m30"
-  },
-  {
-    "group_id": "vinden",
-    "slot": "raid_master",
-    "member_id": "m31"
-  },
-  {
-    "group_id": "kallaren",
-    "slot": "raid_master",
-    "member_id": "m32"
-  },
-  {
-    "group_id": "skafferiet",
-    "slot": "raid_master",
-    "member_id": "m33"
-  },
-  {
-    "group_id": "hallen",
-    "slot": "raid_master",
-    "member_id": "m34"
-  },
-  {
-    "group_id": "altanen",
-    "slot": "raid_master",
-    "member_id": "m35"
-  },
-  {
-    "group_id": "jordkallaren",
-    "slot": "raid_master",
-    "member_id": "m36"
-  },
-  {
-    "group_id": "vedboden",
-    "slot": "raid_master",
-    "member_id": "m37"
-  },
-  {
-    "group_id": "trappan",
-    "slot": "raid_master",
-    "member_id": "m38"
-  },
-  {
-    "group_id": "gastrummet",
-    "slot": "raid_master",
-    "member_id": "m39"
-  }
-]
+[
+  {
+    "group_id": "spiselganget",
+    "slot": "raid_master",
+    "member_id": "m05"
+  },
+  {
+    "group_id": "spiselganget",
+    "slot": "leadership",
+    "member_id": "m05"
+  },
+  {
+    "group_id": "spiselganget",
+    "slot": "signups",
+    "member_id": "m06"
+  },
+  {
+    "group_id": "spiselganget",
+    "slot": "roster",
+    "member_id": "m05"
+  },
+  {
+    "group_id": "spiselganget",
+    "slot": "loot",
+    "member_id": "m07"
+  },
+  {
+    "group_id": "spiselganget",
+    "slot": "assignments",
+    "member_id": "m06"
+  },
+  {
+    "group_id": "spiselganget",
+    "slot": "assignments",
+    "member_id": "m08"
+  },
+  {
+    "group_id": "kvallsfikat",
+    "slot": "raid_master",
+    "member_id": "m09"
+  },
+  {
+    "group_id": "kvallsfikat",
+    "slot": "leadership",
+    "member_id": "m10"
+  },
+  {
+    "group_id": "kvallsfikat",
+    "slot": "loot",
+    "member_id": "m11"
+  },
+  {
+    "group_id": "kvallsfikat",
+    "slot": "assignments",
+    "member_id": "m10"
+  },
+  {
+    "group_id": "nattskiftet",
+    "slot": "raid_master",
+    "member_id": "m03"
+  },
+  {
+    "group_id": "nattskiftet",
+    "slot": "leadership",
+    "member_id": "m12"
+  },
+  {
+    "group_id": "nattskiftet",
+    "slot": "signups",
+    "member_id": "m13"
+  },
+  {
+    "group_id": "nattskiftet",
+    "slot": "roster",
+    "member_id": "m03"
+  },
+  {
+    "group_id": "nattskiftet",
+    "slot": "loot",
+    "member_id": "m13"
+  },
+  {
+    "group_id": "nattskiftet",
+    "slot": "assignments",
+    "member_id": "m12"
+  },
+  {
+    "group_id": "nattskiftet",
+    "slot": "assignments",
+    "member_id": "m14"
+  },
+  {
+    "group_id": "nattskiftet",
+    "slot": "feedback",
+    "member_id": "m03"
+  },
+  {
+    "group_id": "sondagsrundan",
+    "slot": "raid_master",
+    "member_id": "m08"
+  },
+  {
+    "group_id": "bastuklubben",
+    "slot": "raid_master",
+    "member_id": "m15"
+  },
+  {
+    "group_id": "kakelugnen",
+    "slot": "raid_master",
+    "member_id": "m16"
+  },
+  {
+    "group_id": "kakelugnen",
+    "slot": "leadership",
+    "member_id": "m17"
+  },
+  {
+    "group_id": "kakelugnen",
+    "slot": "assignments",
+    "member_id": "m18"
+  },
+  {
+    "group_id": "vardagsrummet",
+    "slot": "raid_master",
+    "member_id": "m19"
+  },
+  {
+    "group_id": "vardagsrummet",
+    "slot": "leadership",
+    "member_id": "m20"
+  },
+  {
+    "group_id": "vardagsrummet",
+    "slot": "feedback",
+    "member_id": "m21"
+  },
+  {
+    "group_id": "vardagsrummet",
+    "slot": "loot",
+    "member_id": "m22"
+  },
+  {
+    "group_id": "glasverandan",
+    "slot": "raid_master",
+    "member_id": "m23"
+  },
+  {
+    "group_id": "glasverandan",
+    "slot": "leadership",
+    "member_id": "m24"
+  },
+  {
+    "group_id": "glasverandan",
+    "slot": "signups",
+    "member_id": "m25"
+  },
+  {
+    "group_id": "glasverandan",
+    "slot": "roster",
+    "member_id": "m26"
+  },
+  {
+    "group_id": "grytan",
+    "slot": "raid_master",
+    "member_id": "m27"
+  },
+  {
+    "group_id": "grytan",
+    "slot": "leadership",
+    "member_id": "m28"
+  },
+  {
+    "group_id": "grytan",
+    "slot": "assignments",
+    "member_id": "m29"
+  },
+  {
+    "group_id": "tvattstugan",
+    "slot": "raid_master",
+    "member_id": "m30"
+  },
+  {
+    "group_id": "vinden",
+    "slot": "raid_master",
+    "member_id": "m31"
+  },
+  {
+    "group_id": "kallaren",
+    "slot": "raid_master",
+    "member_id": "m32"
+  },
+  {
+    "group_id": "skafferiet",
+    "slot": "raid_master",
+    "member_id": "m33"
+  },
+  {
+    "group_id": "hallen",
+    "slot": "raid_master",
+    "member_id": "m34"
+  },
+  {
+    "group_id": "altanen",
+    "slot": "raid_master",
+    "member_id": "m35"
+  },
+  {
+    "group_id": "jordkallaren",
+    "slot": "raid_master",
+    "member_id": "m36"
+  },
+  {
+    "group_id": "vedboden",
+    "slot": "raid_master",
+    "member_id": "m37"
+  },
+  {
+    "group_id": "trappan",
+    "slot": "raid_master",
+    "member_id": "m38"
+  },
+  {
+    "group_id": "gastrummet",
+    "slot": "raid_master",
+    "member_id": "m39"
+  }
+]
