@@ -1,438 +1,438 @@
-[
-  {
-    "id": "spiselganget",
-    "name": "Spiselgänget",
-    "size": 40,
-    "raid_id": "A1",
-    "ambition": "A",
-    "raid_days": [
-      "wed",
-      "sun"
-    ],
-    "raid_start": "19:30",
-    "schedule_note": null,
-    "status": "active",
-    "blurb": "Gänget som vill se bossarna ligga tidigt i veckan. Förbered dig, kom i tid och ta med pots.",
-    "details": "Vi kör det som är öppet just nu och siktar på fullclear varje vecka.\n\nKom förberedd: flasks, full consumables och läst på assignments.",
-    "recruit_roles": [
-      "tank",
-      "healer"
-    ],
-    "recruit_note": "En healer, gärna präst eller druid, och en tank som kan OT:a. Hör av dig till Kaminfejar.",
-    "links": {
-      "thread": null
-    },
-    "signup": "ask"
-  },
-  {
-    "id": "kvallsfikat",
-    "name": "Kvällsfikat",
-    "size": 20,
-    "raid_id": "C1",
-    "ambition": "C",
-    "raid_days": [
-      "tue"
-    ],
-    "raid_start": "20:00",
-    "schedule_note": null,
-    "status": "active",
-    "blurb": "En kväll i veckan, kaffe på bordet och ingen stress. Vi klarar det, bara inte nödvändigtvis på första försöket.",
-    "details": "Vi tar det i den takt gruppen orkar. Nya spelare är välkomna, fråga gärna om du är osäker på något.",
-    "recruit_roles": [
-      "healer"
-    ],
-    "recruit_note": "Alla är välkomna, särskilt healers. Ingen erfarenhet krävs, bara gott humör.",
-    "links": {
-      "thread": null
-    },
-    "signup": "open"
-  },
-  {
-    "id": "nattskiftet",
-    "name": "Nattskiftet",
-    "size": 40,
-    "raid_id": "B1",
-    "ambition": "B",
-    "raid_days": [
-      "thu",
-      "fri"
-    ],
-    "raid_start": "21:00",
-    "schedule_note": null,
-    "status": "active",
-    "blurb": "För dig som lägger barnen först och bossarna sen.",
-    "details": "Sena kvällar, lugnt tempo, inga wipe-nätter efter midnatt.",
-    "recruit_roles": [],
-    "recruit_note": null,
-    "links": {
-      "thread": null
-    },
-    "signup": "full"
-  },
-  {
-    "id": "sondagsrundan",
-    "name": "Söndagsrundan",
-    "size": 10,
-    "raid_id": "C1",
-    "ambition": "C",
-    "raid_days": [
-      "sun"
-    ],
-    "raid_start": null,
-    "schedule_note": "Eftermiddag",
-    "status": "active",
-    "blurb": "Den som har tid hänger på.",
-    "details": null,
-    "recruit_roles": [
-      "tank",
-      "healer",
-      "dps"
-    ],
-    "recruit_note": "Den som har tid en söndag hänger på.",
-    "links": {
-      "thread": null
-    },
-    "signup": "open"
-  },
-  {
-    "id": "bastuklubben",
-    "name": "Bastuklubben",
-    "size": 10,
-    "raid_id": "B1",
-    "ambition": "B",
-    "raid_days": [],
-    "raid_start": null,
-    "schedule_note": "När det passar",
-    "status": "active",
-    "blurb": "Kompisgänget som alltid saknar en healer.",
-    "details": null,
-    "recruit_roles": [],
-    "recruit_note": null,
-    "links": {
-      "thread": null
-    },
-    "signup": "full"
-  },
-  {
-    "id": "kakelugnen",
-    "name": "Kakelugnen",
-    "size": 20,
-    "raid_id": "A1",
-    "ambition": "A",
-    "raid_days": [
-      "wed",
-      "sun"
-    ],
-    "raid_start": "20:00",
-    "schedule_note": null,
-    "status": "active",
-    "blurb": "Varmt inombords, men vi räknar varje sekund. Logs efter varje kväll.",
-    "details": "Vi siktar på snabba clears och bra parses. Full consumables, läst på assignments innan raid.",
-    "recruit_roles": [
-      "healer"
-    ],
-    "recruit_note": null,
-    "links": {
-      "thread": null
-    },
-    "signup": "ask"
-  },
-  {
-    "id": "vardagsrummet",
-    "name": "Vardagsrummet",
-    "size": 20,
-    "raid_id": "B1",
-    "ambition": "B",
-    "raid_days": [
-      "thu"
-    ],
-    "raid_start": "19:30",
-    "schedule_note": null,
-    "status": "active",
-    "blurb": "Torsdagar i soffan, fokuserat men inte stelt.",
-    "details": "Vi kör ZG och AQ20 varje vecka. Kom i tid och med pots, så har vi kul.",
-    "recruit_roles": [
-      "tank",
-      "dps"
-    ],
-    "recruit_note": null,
-    "links": {
-      "thread": null
-    },
-    "signup": "open"
-  },
-  {
-    "id": "glasverandan",
-    "name": "Glasverandan",
-    "size": 20,
-    "raid_id": "B2",
-    "ambition": "B",
-    "raid_days": [
-      "mon",
-      "wed"
-    ],
-    "raid_start": "21:00",
-    "schedule_note": null,
-    "status": "active",
-    "blurb": "Sena kvällar för dig som lagt barnen.",
-    "details": "Två kvällar i veckan efter läggning. Vi håller oss till ett pass på max två timmar.",
-    "recruit_roles": [],
-    "recruit_note": null,
-    "links": {
-      "thread": null
-    },
-    "signup": "full"
-  },
-  {
-    "id": "grytan",
-    "name": "Grytan",
-    "size": 20,
-    "raid_id": "C2",
-    "ambition": "C",
-    "raid_days": [
-      "sat"
-    ],
-    "raid_start": "18:00",
-    "schedule_note": null,
-    "status": "active",
-    "blurb": "Allt i en gryta: nya, gamla, alts och mains.",
-    "details": "Lördagsraid utan krav. Vill du testa raidning för första gången är det här rätt ställe.",
-    "recruit_roles": [
-      "tank",
-      "healer",
-      "dps"
-    ],
-    "recruit_note": null,
-    "links": {
-      "thread": null
-    },
-    "signup": "open"
-  },
-  {
-    "id": "tvattstugan",
-    "name": "Tvättstugan",
-    "size": 10,
-    "raid_id": "C2",
-    "ambition": "C",
-    "raid_days": [
-      "sun"
-    ],
-    "raid_start": "13:00",
-    "schedule_note": null,
-    "status": "active",
-    "blurb": "Bokad tid söndagar, alltid lite rörigt.",
-    "details": null,
-    "recruit_roles": [
-      "dps"
-    ],
-    "recruit_note": null,
-    "links": {
-      "thread": null
-    },
-    "signup": "open"
-  },
-  {
-    "id": "vinden",
-    "name": "Vinden",
-    "size": 10,
-    "raid_id": "B2",
-    "ambition": "B",
-    "raid_days": [
-      "tue"
-    ],
-    "raid_start": "21:00",
-    "schedule_note": null,
-    "status": "active",
-    "blurb": "Uppe på vinden letar vi efter gammal loot.",
-    "details": null,
-    "recruit_roles": [
-      "healer"
-    ],
-    "recruit_note": null,
-    "links": {
-      "thread": null
-    },
-    "signup": "ask"
-  },
-  {
-    "id": "kallaren",
-    "name": "Källaren",
-    "size": 10,
-    "raid_id": "A1",
-    "ambition": "A",
-    "raid_days": [
-      "fri"
-    ],
-    "raid_start": "20:00",
-    "schedule_note": null,
-    "status": "active",
-    "blurb": "Mörkt, svalt och väldigt effektivt.",
-    "details": "Min-max i 10-manna. Vi speedrunnar och jagar 99:or.",
-    "recruit_roles": [],
-    "recruit_note": null,
-    "links": {
-      "thread": null
-    },
-    "signup": "full"
-  },
-  {
-    "id": "skafferiet",
-    "name": "Skafferiet",
-    "size": 10,
-    "raid_id": "C3",
-    "ambition": "C",
-    "raid_days": [
-      "mon"
-    ],
-    "raid_start": "19:00",
-    "schedule_note": null,
-    "status": "active",
-    "blurb": "Alltid något gott på hyllan.",
-    "details": null,
-    "recruit_roles": [
-      "tank"
-    ],
-    "recruit_note": null,
-    "links": {
-      "thread": null
-    },
-    "signup": "open"
-  },
-  {
-    "id": "hallen",
-    "name": "Hallen",
-    "size": 10,
-    "raid_id": "B3",
-    "ambition": "B",
-    "raid_days": [
-      "thu"
-    ],
-    "raid_start": "21:30",
-    "schedule_note": null,
-    "status": "active",
-    "blurb": "Snabbt in, snabbt ut.",
-    "details": null,
-    "recruit_roles": [
-      "healer",
-      "dps"
-    ],
-    "recruit_note": null,
-    "links": {
-      "thread": null
-    },
-    "signup": "open"
-  },
-  {
-    "id": "altanen",
-    "name": "Altanen",
-    "size": 10,
-    "raid_id": "C4",
-    "ambition": "C",
-    "raid_days": [
-      "sat",
-      "sun"
-    ],
-    "raid_start": "11:00",
-    "schedule_note": null,
-    "status": "active",
-    "blurb": "Helgförmiddagar med kaffe ute.",
-    "details": null,
-    "recruit_roles": [],
-    "recruit_note": null,
-    "links": {
-      "thread": null
-    },
-    "signup": "ask"
-  },
-  {
-    "id": "jordkallaren",
-    "name": "Jordkällaren",
-    "size": 10,
-    "raid_id": "A2",
-    "ambition": "A",
-    "raid_days": [
-      "wed"
-    ],
-    "raid_start": "21:00",
-    "schedule_note": null,
-    "status": "active",
-    "blurb": "Fast kärna, fasta mål.",
-    "details": null,
-    "recruit_roles": [
-      "tank"
-    ],
-    "recruit_note": null,
-    "links": {
-      "thread": null
-    },
-    "signup": "ask"
-  },
-  {
-    "id": "vedboden",
-    "name": "Vedboden",
-    "size": 10,
-    "raid_id": "B4",
-    "ambition": "B",
-    "raid_days": [
-      "sun"
-    ],
-    "raid_start": "19:00",
-    "schedule_note": null,
-    "status": "active",
-    "blurb": "Vi hugger ved och bossar.",
-    "details": null,
-    "recruit_roles": [],
-    "recruit_note": null,
-    "links": {
-      "thread": null
-    },
-    "signup": "full"
-  },
-  {
-    "id": "trappan",
-    "name": "Trappan",
-    "size": 10,
-    "raid_id": "C5",
-    "ambition": "C",
-    "raid_days": [],
-    "raid_start": null,
-    "schedule_note": "När det passar",
-    "status": "active",
-    "blurb": "Ett steg i taget, när det passar.",
-    "details": null,
-    "recruit_roles": [
-      "dps",
-      "healer"
-    ],
-    "recruit_note": null,
-    "links": {
-      "thread": null
-    },
-    "signup": "open"
-  },
-  {
-    "id": "gastrummet",
-    "name": "Gästrummet",
-    "size": 10,
-    "raid_id": "C6",
-    "ambition": "C",
-    "raid_days": [
-      "fri"
-    ],
-    "raid_start": "18:30",
-    "schedule_note": null,
-    "status": "active",
-    "blurb": "Alla gäster välkomna, även från andra guilds.",
-    "details": null,
-    "recruit_roles": [
-      "tank",
-      "healer",
-      "dps"
-    ],
-    "recruit_note": null,
-    "links": {
-      "thread": null
-    },
-    "signup": "open"
-  }
-]
+[
+  {
+    "id": "spiselganget",
+    "name": "Spiselgänget",
+    "size": 40,
+    "raid_id": "A1",
+    "ambition": "A",
+    "raid_days": [
+      "wed",
+      "sun"
+    ],
+    "raid_start": "19:30",
+    "schedule_note": null,
+    "status": "active",
+    "blurb": "Gänget som vill se bossarna ligga tidigt i veckan. Förbered dig, kom i tid och ta med pots.",
+    "details": "Vi kör det som är öppet just nu och siktar på fullclear varje vecka.\n\nKom förberedd: flasks, full consumables och läst på assignments.",
+    "recruit_roles": [
+      "tank",
+      "healer"
+    ],
+    "recruit_note": "En healer, gärna präst eller druid, och en tank som kan OT:a. Hör av dig till Kaminfejar.",
+    "links": {
+      "thread": null
+    },
+    "signup": "ask"
+  },
+  {
+    "id": "kvallsfikat",
+    "name": "Kvällsfikat",
+    "size": 20,
+    "raid_id": "C1",
+    "ambition": "C",
+    "raid_days": [
+      "tue"
+    ],
+    "raid_start": "20:00",
+    "schedule_note": null,
+    "status": "active",
+    "blurb": "En kväll i veckan, kaffe på bordet och ingen stress. Vi klarar det, bara inte nödvändigtvis på första försöket.",
+    "details": "Vi tar det i den takt gruppen orkar. Nya spelare är välkomna, fråga gärna om du är osäker på något.",
+    "recruit_roles": [
+      "healer"
+    ],
+    "recruit_note": "Alla är välkomna, särskilt healers. Ingen erfarenhet krävs, bara gott humör.",
+    "links": {
+      "thread": null
+    },
+    "signup": "open"
+  },
+  {
+    "id": "nattskiftet",
+    "name": "Nattskiftet",
+    "size": 40,
+    "raid_id": "B1",
+    "ambition": "B",
+    "raid_days": [
+      "thu",
+      "fri"
+    ],
+    "raid_start": "21:00",
+    "schedule_note": null,
+    "status": "active",
+    "blurb": "För dig som lägger barnen först och bossarna sen.",
+    "details": "Sena kvällar, lugnt tempo, inga wipe-nätter efter midnatt.",
+    "recruit_roles": [],
+    "recruit_note": null,
+    "links": {
+      "thread": null
+    },
+    "signup": "full"
+  },
+  {
+    "id": "sondagsrundan",
+    "name": "Söndagsrundan",
+    "size": 10,
+    "raid_id": "C1",
+    "ambition": "C",
+    "raid_days": [
+      "sun"
+    ],
+    "raid_start": null,
+    "schedule_note": "Eftermiddag",
+    "status": "active",
+    "blurb": "Den som har tid hänger på.",
+    "details": null,
+    "recruit_roles": [
+      "tank",
+      "healer",
+      "dps"
+    ],
+    "recruit_note": "Den som har tid en söndag hänger på.",
+    "links": {
+      "thread": null
+    },
+    "signup": "open"
+  },
+  {
+    "id": "bastuklubben",
+    "name": "Bastuklubben",
+    "size": 10,
+    "raid_id": "B1",
+    "ambition": "B",
+    "raid_days": [],
+    "raid_start": null,
+    "schedule_note": "När det passar",
+    "status": "active",
+    "blurb": "Kompisgänget som alltid saknar en healer.",
+    "details": null,
+    "recruit_roles": [],
+    "recruit_note": null,
+    "links": {
+      "thread": null
+    },
+    "signup": "full"
+  },
+  {
+    "id": "kakelugnen",
+    "name": "Kakelugnen",
+    "size": 20,
+    "raid_id": "A1",
+    "ambition": "A",
+    "raid_days": [
+      "wed",
+      "sun"
+    ],
+    "raid_start": "20:00",
+    "schedule_note": null,
+    "status": "active",
+    "blurb": "Varmt inombords, men vi räknar varje sekund. Logs efter varje kväll.",
+    "details": "Vi siktar på snabba clears och bra parses. Full consumables, läst på assignments innan raid.",
+    "recruit_roles": [
+      "healer"
+    ],
+    "recruit_note": null,
+    "links": {
+      "thread": null
+    },
+    "signup": "ask"
+  },
+  {
+    "id": "vardagsrummet",
+    "name": "Vardagsrummet",
+    "size": 20,
+    "raid_id": "B1",
+    "ambition": "B",
+    "raid_days": [
+      "thu"
+    ],
+    "raid_start": "19:30",
+    "schedule_note": null,
+    "status": "active",
+    "blurb": "Torsdagar i soffan, fokuserat men inte stelt.",
+    "details": "Vi kör ZG och AQ20 varje vecka. Kom i tid och med pots, så har vi kul.",
+    "recruit_roles": [
+      "tank",
+      "dps"
+    ],
+    "recruit_note": null,
+    "links": {
+      "thread": null
+    },
+    "signup": "open"
+  },
+  {
+    "id": "glasverandan",
+    "name": "Glasverandan",
+    "size": 20,
+    "raid_id": "B2",
+    "ambition": "B",
+    "raid_days": [
+      "mon",
+      "wed"
+    ],
+    "raid_start": "21:00",
+    "schedule_note": null,
+    "status": "active",
+    "blurb": "Sena kvällar för dig som lagt barnen.",
+    "details": "Två kvällar i veckan efter nattning. Vi håller oss till ett pass på max två timmar.",
+    "recruit_roles": [],
+    "recruit_note": null,
+    "links": {
+      "thread": null
+    },
+    "signup": "full"
+  },
+  {
+    "id": "grytan",
+    "name": "Grytan",
+    "size": 20,
+    "raid_id": "C2",
+    "ambition": "C",
+    "raid_days": [
+      "sat"
+    ],
+    "raid_start": "18:00",
+    "schedule_note": null,
+    "status": "active",
+    "blurb": "Allt i en gryta: nya, gamla, alts och mains.",
+    "details": "Lördagsraid utan krav. Vill du testa raidning för första gången är det här rätt ställe.",
+    "recruit_roles": [
+      "tank",
+      "healer",
+      "dps"
+    ],
+    "recruit_note": null,
+    "links": {
+      "thread": null
+    },
+    "signup": "open"
+  },
+  {
+    "id": "tvattstugan",
+    "name": "Tvättstugan",
+    "size": 10,
+    "raid_id": "C2",
+    "ambition": "C",
+    "raid_days": [
+      "sun"
+    ],
+    "raid_start": "13:00",
+    "schedule_note": null,
+    "status": "active",
+    "blurb": "Bokad tid söndagar, alltid lite rörigt.",
+    "details": null,
+    "recruit_roles": [
+      "dps"
+    ],
+    "recruit_note": null,
+    "links": {
+      "thread": null
+    },
+    "signup": "open"
+  },
+  {
+    "id": "vinden",
+    "name": "Vinden",
+    "size": 10,
+    "raid_id": "B2",
+    "ambition": "B",
+    "raid_days": [
+      "tue"
+    ],
+    "raid_start": "21:00",
+    "schedule_note": null,
+    "status": "active",
+    "blurb": "Uppe på vinden letar vi efter gammal loot.",
+    "details": null,
+    "recruit_roles": [
+      "healer"
+    ],
+    "recruit_note": null,
+    "links": {
+      "thread": null
+    },
+    "signup": "ask"
+  },
+  {
+    "id": "kallaren",
+    "name": "Källaren",
+    "size": 10,
+    "raid_id": "A1",
+    "ambition": "A",
+    "raid_days": [
+      "fri"
+    ],
+    "raid_start": "20:00",
+    "schedule_note": null,
+    "status": "active",
+    "blurb": "Mörkt, svalt och väldigt effektivt.",
+    "details": "Min-max i 10-manna. Vi speedrunnar och jagar 99:or.",
+    "recruit_roles": [],
+    "recruit_note": null,
+    "links": {
+      "thread": null
+    },
+    "signup": "full"
+  },
+  {
+    "id": "skafferiet",
+    "name": "Skafferiet",
+    "size": 10,
+    "raid_id": "C3",
+    "ambition": "C",
+    "raid_days": [
+      "mon"
+    ],
+    "raid_start": "19:00",
+    "schedule_note": null,
+    "status": "active",
+    "blurb": "Alltid något gott på hyllan.",
+    "details": null,
+    "recruit_roles": [
+      "tank"
+    ],
+    "recruit_note": null,
+    "links": {
+      "thread": null
+    },
+    "signup": "open"
+  },
+  {
+    "id": "hallen",
+    "name": "Hallen",
+    "size": 10,
+    "raid_id": "B3",
+    "ambition": "B",
+    "raid_days": [
+      "thu"
+    ],
+    "raid_start": "21:30",
+    "schedule_note": null,
+    "status": "active",
+    "blurb": "Snabbt in, snabbt ut.",
+    "details": null,
+    "recruit_roles": [
+      "healer",
+      "dps"
+    ],
+    "recruit_note": null,
+    "links": {
+      "thread": null
+    },
+    "signup": "open"
+  },
+  {
+    "id": "altanen",
+    "name": "Altanen",
+    "size": 10,
+    "raid_id": "C4",
+    "ambition": "C",
+    "raid_days": [
+      "sat",
+      "sun"
+    ],
+    "raid_start": "11:00",
+    "schedule_note": null,
+    "status": "active",
+    "blurb": "Helgförmiddagar med kaffe ute.",
+    "details": null,
+    "recruit_roles": [],
+    "recruit_note": null,
+    "links": {
+      "thread": null
+    },
+    "signup": "ask"
+  },
+  {
+    "id": "jordkallaren",
+    "name": "Jordkällaren",
+    "size": 10,
+    "raid_id": "A2",
+    "ambition": "A",
+    "raid_days": [
+      "wed"
+    ],
+    "raid_start": "21:00",
+    "schedule_note": null,
+    "status": "active",
+    "blurb": "Fast kärna, fasta mål.",
+    "details": null,
+    "recruit_roles": [
+      "tank"
+    ],
+    "recruit_note": null,
+    "links": {
+      "thread": null
+    },
+    "signup": "ask"
+  },
+  {
+    "id": "vedboden",
+    "name": "Vedboden",
+    "size": 10,
+    "raid_id": "B4",
+    "ambition": "B",
+    "raid_days": [
+      "sun"
+    ],
+    "raid_start": "19:00",
+    "schedule_note": null,
+    "status": "active",
+    "blurb": "Vi hugger ved och bossar.",
+    "details": null,
+    "recruit_roles": [],
+    "recruit_note": null,
+    "links": {
+      "thread": null
+    },
+    "signup": "full"
+  },
+  {
+    "id": "trappan",
+    "name": "Trappan",
+    "size": 10,
+    "raid_id": "C5",
+    "ambition": "C",
+    "raid_days": [],
+    "raid_start": null,
+    "schedule_note": "När det passar",
+    "status": "active",
+    "blurb": "Ett steg i taget, när det passar.",
+    "details": null,
+    "recruit_roles": [
+      "dps",
+      "healer"
+    ],
+    "recruit_note": null,
+    "links": {
+      "thread": null
+    },
+    "signup": "open"
+  },
+  {
+    "id": "gastrummet",
+    "name": "Gästrummet",
+    "size": 10,
+    "raid_id": "C6",
+    "ambition": "C",
+    "raid_days": [
+      "fri"
+    ],
+    "raid_start": "18:30",
+    "schedule_note": null,
+    "status": "active",
+    "blurb": "Alla gäster välkomna, även från andra guilds.",
+    "details": null,
+    "recruit_roles": [
+      "tank",
+      "healer",
+      "dps"
+    ],
+    "recruit_note": null,
+    "links": {
+      "thread": null
+    },
+    "signup": "open"
+  }
+]

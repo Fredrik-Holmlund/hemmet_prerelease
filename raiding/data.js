@@ -27,7 +27,7 @@ const TABLES = ["roles", "functions", "members", "groups", "assignments", "ambit
 const KEY = "hemmet-ledning-demo";
 const EDITABLE = ["groups", "assignments", "boards", "templates", "members"];   // resten hämtas alltid färskt från filerna
 // höj när exempeldatan i data/*.json ändras: äldre sparade demoändringar slängs då, annars syns inte det nya
-const SEED_VERSION = 3;
+const SEED_VERSION = 4;
 
 let db = null;
 
